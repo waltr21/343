@@ -11,6 +11,9 @@ What's the point?
 
 Why do we study programming languages?
 ---
+First Reason
+***
+
 Language give us the ability to express what we are thinking.
 
 It can be hard to convey something we don't have a direct translation for.
@@ -96,3 +99,28 @@ jmp beginning             // Go to the beginning
 end:
 mov $x, eax               // Move the value in eax to
 ```
+---
+It is the same as this!
+
+```
+while(x <= 10){
+  x++;
+}
+```
+
+Why was it so much more complicated in the first example??
+---
+Assembly language lacks the concept of looping!
+
+Looping is a higher-order idea.
+---
+Second Reason
+***
+
+The tools we are provided with help us "attack the problem".
+
+i.e., you *can* use a wrench as a hammer, but doesn't mean it is ideal (or that you should...)
+---
+For instance, some people may want to write web programs with HTML forms via C.
+
+---?code=code_samples/c-cgi-never-do-this.c
