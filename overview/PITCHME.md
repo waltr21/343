@@ -20,4 +20,11 @@ For instance, how do you describe:
 The wordless yet meaningful look shared by two people who desire to initiate something, but are both reluctant to start.
 +++
 Mamihlapinatapei
-(a Yagan word [native tribe from Tierra Del Fuego])
+
+A Yagan word (a native tribe from Tierra Del Fuego).
+---
+A relationship by fate or destiny.
++++
+Yuanfen
+
+Chinese
