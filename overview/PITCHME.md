@@ -123,4 +123,183 @@ i.e., you *can* use a wrench as a hammer, but doesn't mean it is ideal (or that 
 ---
 For instance, some people may want to write web programs with HTML forms via C.
 
+(taken from https://www.cs.tut.fi/~jkorpela/forms/cgic.html)
 ---?code=code_samples/c-cgi-never-do-this.c
+Code is a nightmare!
+
+Relies on hard coding some values sent, such as headers.  This can cause problems as things change.
+
+C doesn't natively understand the web.  You will need to re-invent the wheel continuously to get anything done - even then your code is not likely to be safe.
+---
+So, we *can* use any language we want, but it doesn't mean we should.  By using C we can't take advantage of well-written, robust methods that other languages may provide for web programming.
+---
+Third Reason
+***
+
+Programming languages address specific domains.  No language is perfect for every domain.  Studying languages help us to choose the most appropriate language for a job.
+
+For instance, here are Python and C++ samples for how to read a file and print each line:
+---
+```python
+textFile = open(”filename.txt”, ”r”)
+lines = textFile.readlines()
+for l in lines:
+    print l
+```
+---
+```c++
+#include <fstream>
+#include <string>
+
+int main(int argc, char** argv)
+{
+   std::ifstream file(“filename.txt”);
+   std::string str;
+   while(std::getline(file, str)){
+      std::cout << str << std::endl;
+   }
+}
+```
+---
+Python seems to be more English-like, while C++ includes some constructs that may be confusing (What is "::" for instance?).
+
+C++ has a focus on speed and low-level hardware control.
+
+Python is a more general-purpose language for the masses.
+
+So what domains are there?
++++
+Science
+
+- Must be fast
+- Works with a lot of floating point numbers
+- Must be precise
++++
+Business
+
+- Emphasis is on reporting and output
+- Lots of records and data
++++
+Artificial Intelligence
+
+- Primary data structure may be lists, facts, or other special types.
+- Symbolic
++++
+Systems Programming
+
+- Must be fast
+- Efficient
+- Focuses on hardware
++++
+Many, many other specialized domains
+
+- scripting tools
+- file parsing
+- custom tasks
+---
+Reason Four
+***
+
+Gives us a better ability to express ideas
+---
+In C we don't have a great way to deal with matrices, for example.  Ruby (and many, many other languages) provide us with custom classes and overloaded operators that make working with such constructs a breeze.
+---
+In C, we need to use multidimensional arrays (which technically don't even exist...).
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char** argv){
+  int height = atoi(argv[1]);
+  int width = atoi(argv[2]);
+  int* matrix = malloc(width * height * sizeof(int));
+  for(int i=0; i<height; i++){
+    for(int j=0; j<width; j++){
+      matrix[i][j] = 0;
+    }
+  }
+}
+
+```
+---
+Ruby (much like many higher order languages) provides better facilities (often through libraries).
+
+```ruby
+require "Matrix"
+
+h=Integer(ARGV[0])
+w=Integer(ARGV[1])
+
+m = Matrix.zero(h, w)
+```
+---
+Reason five
+***
+
+It makes it easier for us to learn new languages.
+
+Most of you should know Java; with only your Java knowledge you can probably still guess what the Python code is doing:
+---
+```python
+class House:
+  def __init__(self, s, c, p):
+    self.sq_ft = s
+    self.color = c
+    self.price = p
+```
+---
+It is the same as this:
+
+```java
+public class House {
+  public int sq_ft;
+  public Color color;
+  public float price;
+
+  public House(int s, Color c, float p){
+    this.sq_ft = s;
+    this.color = c;
+    this.price = p;
+  }
+}
+```
+---
+Reason Six
+***
+
+Helps us understand why languages are implemented the way they are.
+
+Such as include guards:
+---
+```c
+...
+#ifndef _UNISTDIO_H
+#define _UNISTDIO_H
+
+#include "unitypes.h"
+
+/* Get size_t.  */
+#include <stddef.h>
+
+/* Get FILE.  */
+#include <stdio.h>
+
+/* Get va_list.  */
+#include <stdarg.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* These work like the printf function family.
+...
+```
+They are in almost every \*.h file.
+
+Why are they there?  Prevent multiple sourcings of the same code, as the compiler attempts to define each file each time it is needed.
+---
+Reason Seven
+***
+
+Helps us to use languages better.
