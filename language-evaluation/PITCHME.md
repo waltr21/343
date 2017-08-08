@@ -44,3 +44,5 @@ However, having higher-level constructs alone does not necessarily make a langua
 ---?code=code_samples/prog.c
 Or, this one:
 ---?code=code_samples/prog2.c
+---
+Both of these programs are perfectly valid C code.  They include higher-level concepts than Assembly Language typically provides, yet they are anything but readable.  So then, what makes code written in one programming language more readable than another?
