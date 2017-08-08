@@ -7,4 +7,4 @@ Schedule
 |------|-------|---------|------------|-------|
 | 1    | Syllabus and Introductions | Chapter 1 | | |
 |      | [Overview](https://gitpitch.com/irawoodring/343/master?p=overview "Overview slides") | | |
-|      | Language Evaluation | | | |
+|      | [Language Evaluation](https://gitpitch.com/irawoodring/343/master?p=language-evaluation "Language evaluation slides") | | | |
