@@ -14,7 +14,7 @@ Why do we study programming languages?
 First Reason
 ***
 
-Language give us the ability to express what we are thinking.
+Languages give us the ability to express what we are thinking.
 
 It can be hard to convey something we don't have a direct translation for.
 
@@ -125,6 +125,7 @@ For instance, some people may want to write web programs with HTML forms via C.
 
 (taken from https://www.cs.tut.fi/~jkorpela/forms/cgic.html)
 ---?code=code_samples/c-cgi-never-do-this.c
+---
 Code is a nightmare!
 
 Relies on hard coding some values sent, such as headers.  This can cause problems as things change.
