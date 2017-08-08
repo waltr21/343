@@ -303,3 +303,29 @@ Reason Seven
 ***
 
 Helps us to use languages better.
+---
+In C for instance, it is very common to see folks just exit or return 0 when an error occurs.
+
+But, if we understand return codes and what they can be used for (automating code runs), we know we can do something better:
+
+```c
+#include <stdio.h>
+#include <errno.h>
+
+int main(int argc, char** argv){
+  FILE *file_descriptor;
+  file = fopen("myFile.txt", "rw");
+  if(!file){
+    return errno;
+  }
+}
+```
+
+**Not complete; just an example!**
+---
+Reason Nine
+***
+
+Helps us advance the field.
+
+By understanding what has been created before, we have a better idea of what we don't need to recreate, what we can make better, and what we still need to create.
