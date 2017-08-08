@@ -33,3 +33,14 @@ Readability
 Refers to how easily the language can be read and understood.  For instance, how here is the source code for the original *Prince of Persia* game:
 
 ---?code=code_samples/HIRES.S
+https://raw.githubusercontent.com/jmechner/Prince-of-Persia-Apple-II/master/01%20POP%20Source/Source/HIRES.S
+---
+Readability
+***
+
+This Assembly Language code was very low-level.  It lacked things like for-loops and other higher-level constructs.  Because of these deficiencies it is much more cumbersome to express ideas concisely.
+
+However, having higher-level constructs alone does not necessarily make a language more readable.  Consider the following code:
+---?code=code_samples/prog.c
+Or, this one:
+---?code=code_samples/prog2.c
