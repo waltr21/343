@@ -27,3 +27,9 @@ We will mostly focus on the first three in this class
 - Expressivity
 - Cost
 ---
+Readability
+***
+
+Refers to how easily the language can be read and understood.  For instance, how here is the source code for the original *Prince of Persia* game:
+
+---?code=https://github.com/jmechner/Prince-of-Persia-Apple-II/blob/master/01%20POP%20Source/Source/HIRES.S
