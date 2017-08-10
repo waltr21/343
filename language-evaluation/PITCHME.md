@@ -6,6 +6,7 @@ Ira Woodring
 ***
 
 Language Evaluation Criteria
+(Follows the Sebesta Text Chapter 1)
 ---
 We know now that different languages address different domains.  Sometimes that may be enough for us to make a choice.  For instance, we wouldn't want to use Java or Python to make an operating system, as they require an interpreter.
 
@@ -150,6 +151,7 @@ int[] getValues(){
   return values;             // Not valid!
 }
 ```
+---
 Readability - Orthogonality
 ***
 

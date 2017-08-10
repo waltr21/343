@@ -6,6 +6,7 @@ Ira Woodring
 ***
 
 Class Overview
+(Follows the Sebesta Text, Chapter 1)
 ---
 What's the point?
 
