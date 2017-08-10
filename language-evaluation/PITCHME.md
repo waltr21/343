@@ -59,11 +59,11 @@ Readability
 
 Simplicity.
 
-1 - Having a small number of basic constructs
+- Having a small number of basic constructs
 
-2 - Feature multiplicity
+- Feature multiplicity
 
-3 - Operator overloading
+- Operator overloading
 ---
 Readability - Simplicity
 ***
@@ -75,7 +75,9 @@ How many keywords and operators does the language have?  The larger the number t
 Readability - Simplicity
 ***
 
-**Feature multiplicity.**  How many different ways can you accomplish the same operation?  For instance, in many languages you may do any of the following to accomplish the same task:
+**Feature multiplicity**
+
+How many different ways can you accomplish the same operation?  For instance, in many languages you may do any of the following to accomplish the same task:
 ---
 ```
 count = count + 1
@@ -89,7 +91,9 @@ The more ways to accomplish a task, the lower the readability.
 Readability - Simplicity
 ***
 
-**Operator Overloading.**  How many meanings do the operators have?
+**Operator Overloading**
+
+How many meanings do the operators have?
 
 Consider the C programming language.  The \* operator can have many meanings.  It can be used for multiplication, to denote a pointer, to dereference a pointer, to help signify a comment, etc.
 
