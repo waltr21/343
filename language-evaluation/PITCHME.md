@@ -158,6 +158,102 @@ Readability - Orthogonality
 What that means is that in this instance Java is more orthogonal.
 
 Java and C both have a small number of constructs (such as the idea of arrays), but C has limits to how they can be used.  Java has no such restrictions.
+---
+Readability - Orthogonality
+***
 
 Java is therefore more readable; in C we have to use pointers to return an array, but we also use pointers to return pointers from functions.  Understanding the programmer's original intent becomes harder.
+---
+Readability - Orthogonality
+***
+
+But, with everything there is a catch.
+
+Too much orthogonality can be bad too.  For instance, are conditionals allowed on the left side of an assignment statement?
+
+```
+5 * a = b           // May be valid (in some languages), but what is the intent?
+```
+---
+Readability - Data Types
+***
+
+Are they adequate to describe what needs to be described?
+
+For instance, in Python we have a boolean type, but C does not.  In C we must use an integer type to simulate a boolean:
+---
+```Python
+goAhead = true
+```
+
+```C
+int goAhead = 1;
+```
+*Yes, I know there are boolean libraries for C.  They still don't provide full boolean functionality though.  Try using them in an ```if``` statement.*
+---
+Readability - Syntax
+***
+
+Are there easy to use facilities for denoting code groups?
+
+Such as:
++++
+Many languages use braces and semi-colons
+
+  ```
+  for(int i=0; i<10; i++){ ... }
+  ```
++++
+Some languages use tabs or spaces
+
+  ```
+  for i in range(0,10):
+      ....
+  ```
++++
+Others use matching words
+
+  ```
+  if [ $a $eq 1 ]
+  then
+    ...
+  fi
+  ```
+---
+Readability - Syntax
+***
+
+Can special words be used as names of variables (hopefully not!)?  Consider how confusing this might be:
+
+```
+int while = 10;
+while( while < 100 ){
+  ...
+}
+---
+Readability - Syntax
+***
+
+Form and (fairly) obvious meaning.
+
+Meaning should be apparent from the syntax, without the need for context
+---
+Consider this C code:
+
+```C
+static double pi = 3.14159;         // outside of a function definition;
+                                    // means only available to code in
+                                    // this file.
+
+int main(int argc, char** argv){
+  static int my_val = 1;            // inside a function; static here means
+                                    // this is a compile time variable
+}
+```
+---
+Now, let's turn to **Writability**.
+
+The same issues that affect Readability also affect Writability.
+
+But, there are a few more.
 ---
