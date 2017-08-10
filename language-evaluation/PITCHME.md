@@ -30,7 +30,7 @@ We will mostly focus on the first three in this class
 Readability
 ***
 
-Refers to how easily the language can be read and understood.  For instance, how here is the source code for the original *Prince of Persia* game:
+Refers to how easily the language can be read and understood.  For instance, here is the source code for the original *Prince of Persia* game:
 
 ---?code=code_samples/HIRES.S
 https://raw.githubusercontent.com/jmechner/Prince-of-Persia-Apple-II/master/01%20POP%20Source/Source/HIRES.S
