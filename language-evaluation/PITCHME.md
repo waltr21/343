@@ -60,7 +60,9 @@ Readability
 Simplicity.
 
 1 - Having a small number of basic constructs
+
 2 - Feature multiplicity
+
 3 - Operator overloading
 ---
 Readability - Simplicity
@@ -87,7 +89,9 @@ The more ways to accomplish a task, the lower the readability.
 Readability - Simplicity
 ***
 
-**Operator Overloading.**  How many meanings do the operators have?  Consider the C programming language.  The \* operator can have many meanings.  It can be used for multiplication, to denote a pointer, to dereference a pointer, to help signify a comment, etc.
+**Operator Overloading.**  How many meanings do the operators have?
+
+Consider the C programming language.  The \* operator can have many meanings.  It can be used for multiplication, to denote a pointer, to dereference a pointer, to help signify a comment, etc.
 
 For instance:
 ---
@@ -112,7 +116,7 @@ What does this even output???
 Readability - Orthogonality
 ***
 
-Means that a relatively small set of primitive constructs can be combined in a relatively small number of ways to write code, and that every possible combination of primitives is legal and meaningful.
+Means that a **relatively small set of primitive constructs** can be combined in a **relatively small number of ways** to write code, and that every possible combination of primitives is legal and meaningful.
 
 Eh?
 ---
@@ -145,7 +149,9 @@ int[] getValues(){
 Readability - Orthogonality
 ***
 
-What that means is that in this instance Java is more orthogonal.  Java and C both have a small number of constructs (such as the idea of arrays), but C has limits to how they can be used.  Java has no such restrictions.
+What that means is that in this instance Java is more orthogonal.
+
+Java and C both have a small number of constructs (such as the idea of arrays), but C has limits to how they can be used.  Java has no such restrictions.
 
 Java is therefore more readable; in C we have to use pointers to return an array, but we also use pointers to return pointers from functions.  Understanding the programmer's original intent becomes harder.
 ---
