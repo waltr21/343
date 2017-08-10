@@ -257,3 +257,100 @@ The same issues that affect Readability also affect Writability.
 
 But, there are a few more.
 ---
+Writability
+***
+
+Measures how easily the language can be used to create programs.
+---
+Writability - Simplicity and Orthogonality
+***
+
+The larger and more complex the language, the harder it is to use it to solve problems.
+
+Consider how hard it is to debug a language in which every combination of primitives is legal.  For instance, in C it can be very confusing to discover pointer errors.
+---
+Writability - Support for Abstraction
+***
+
+Abstraction refers to the ability to define and use complicated structures without worrying about the underlying details.  In our Ruby matrix example earlier, we didn't need to know or care to know how the matrix was stored behind the scenes.  All we cared about was that we were given a data structure that could efficiently store and operate on a matrix for us.
+---
+Writability - Support for Abstraction
+***
+
+There are two types of abstraction in computing, process abstraction and data abstraction.
+---
+Writability - Support for Abstraction
+***
+
+**Process Abstraction** is the use of subprograms (a function or module) to repeatedly solve a problem.  For instance, if we can pass a custom comparison operator to a sorting function then we can use the same code to sort our data regardless of the data type.
+---
+Writability - Support for Abstraction
+***
+
+**Data Abstraction** allows us to define a data type and operations that work on that data type (such as a class in Java) that we can then reuse.
+---
+Writability - Expressivity
+***
+
+Are there convenient ways to accomplish computations, or do we need to rely on cumbersome methods?
+
+Python, for instance, doesn't allow us to use the (nearly ubiquitous) prefix and postfix operators for variables.
+
+```Python
+count = 0
+count++               // NOT VALID!
+
+count = count + 1     // Valid.
+```
+---
+Writability - Reliability
+***
+
+Does a language always perform to its specifications, under all conditions?
+
+Don't think reliability as in the mechanical sense.  It isn't as if the language isn't going to "start-up" one day.
+---
+Writability - Reliability
+***
+
+**Type Checking**
+
+Does the language test for type errors either during compilation or execution?  For instance, is this an error?
+
+```
+int pi = 3.14159
+```
+
+Some languages will see this as a type error.  Others may not.
+---
+Writability - Reliability
+***
+
+**Exception Handling**
+
+If the language provides facilities to catch run-time errors, correct an issue and continue running, then it has exception handling.
+
+```Java
+try {
+  ... Open a file on a disk for instance ...
+}
+catch (FileNotFoundException fnfex){
+  ... recover; don't let the program crash ...
+}
+```
+---
+Writability - Reliability
+***
+
+**Aliasing**
+
+Does the language allow for two or more names for the same memory location?
+
+Many languages do, but it can be dangerous and harder to program with!  This makes these languages less reliable.
+
+```C++
+int value = 42;
+int & alias = value;    // alias now refers to the same location
+                        // For all intents and purposes they are
+                        // the same variable.
+```
