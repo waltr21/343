@@ -11,9 +11,9 @@ Schedule
 | 2 - 9/04 | Labor Day - No class | | | |
 | 2 - 9/06 | Language Spotlight - C | http://www.learn-c.org/ | | |
 | 2 - 9/08 | Language Spotlight - C | Follow tutorials | C Exercises | |
-| 3 - 9/11 | Architecture and Language History | | C Project | C Exercises Due |
-| 3 - 9/13 | | | | |
-| 3 - 9/15 | | | | |
+| 3 - 9/11 | Architecture and Language History | Chapter 2 | C Project | C Exercises Due |
+| 3 - 9/13 | Syntax and Semantics | Chapter 3 | | |
+| 3 - 9/15 | Syntax and Semantics | | | |
 | 4 - 9/18 | | | | |
 | 4 - 9/20 | | | | |
 | 4 - 9/22 | | | | |
