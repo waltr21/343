@@ -9,8 +9,8 @@ Schedule
 | 1 - 8/30 | [Overview](https://gitpitch.com/irawoodring/343/master?p=overview "Overview slides") | | |
 | 1 - 9/01 | [Language Evaluation](https://gitpitch.com/irawoodring/343/master?p=language-evaluation "Language evaluation slides") | | | |
 | 2 - 9/04 | Labor Day - No class | | | |
-| 2 - 9/06 | Language Spotlight - C | | | |
-| 2 - 9/08 | Language Spotlight - C | | | |
+| 2 - 9/06 | Language Spotlight - C | http://www.learn-c.org/ | | |
+| 2 - 9/08 | Language Spotlight - C | Follow tutorials | | |
 | 3 - 9/11 | | | | |
 | 3 - 9/13 | | | | |
 | 3 - 9/15 | | | | |
