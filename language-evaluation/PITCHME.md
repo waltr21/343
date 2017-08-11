@@ -6,6 +6,7 @@ Ira Woodring
 ***
 
 Language Evaluation Criteria
+
 (Follows the Sebesta Text Chapter 1)
 ---
 We know now that different languages address different domains.  Sometimes that may be enough for us to make a choice.  For instance, we wouldn't want to use Java or Python to make an operating system, as they require an interpreter.
@@ -162,7 +163,9 @@ Java and C both have a small number of constructs (such as the idea of arrays), 
 Readability - Orthogonality
 ***
 
-Java is therefore more readable; in C we have to use pointers to return an array, but we also use pointers to return pointers from functions.  Understanding the programmer's original intent becomes harder.
+Java is therefore more readable; in C we have to use pointers to return an array, but we also use pointers to return pointers from functions.
+
+Understanding the programmer's original intent becomes harder.
 ---
 Readability - Orthogonality
 ***
@@ -230,6 +233,7 @@ int while = 10;
 while( while < 100 ){
   ...
 }
+```
 ---
 Readability - Syntax
 ***
@@ -354,3 +358,24 @@ int & alias = value;    // alias now refers to the same location
                         // For all intents and purposes they are
                         // the same variable.
 ```
+---
+Writability - Cost
+***
+
+We won't be discussing this factor much in this class (it is more a Software Engineering topic), but Cost is a factor in language comparison.
+---
+Cost
+***
+
+- Training programmers to use the language.  Often more powerful languages are more complicated to teach.
+
+- How well the language fits the domain of the application can affect cost.  If the domain is not well supported by the language it may take much longer to program the application.
+---
+Cost
+***
+
+- Compilation costs such as the price of the compiler (proprietary compilers can be expensive!), downtime waiting for compilation to complete, etc. affect cost.
+
+- Cost can also be influenced by runtimes.  Consider for instance renting time on a supercomputer.  This is VERY expensive.  A less efficient language may require longer run times to complete similar jobs.
+
+- Reliability can affect cost as well.
