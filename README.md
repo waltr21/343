@@ -20,8 +20,8 @@ Schedule
 | 5 - 9/25 | Lex and Yacc | | | |
 | 5 - 9/27 | Lex and Yacc | | Lex and Yacc | |
 | 5 - 9/29 | | | | |
-| 6 - 10/02 | | | | |
-| 6 - 10/04 | | | | |
+| 6 - 10/02 | Language Spotlight - Python | | | |
+| 6 - 10/04 | Language Spotlight - Python | | Python Project | |
 | 6 - 10/06 | | | | |
 | 7 - 10/09 | | | | |
 | 7 - 10/11 | | | | |
@@ -50,3 +50,4 @@ Schedule
 | 15 - 12/04 | | | | |
 | 15 - 12/06 | | | | |
 | 15 - 12/08 | | | | |
+| 16 - 12/xx | Final Exam | | | |
