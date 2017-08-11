@@ -14,18 +14,18 @@ Schedule
 | 3 - 9/11 | Architecture and Language History | Chapter 2 | C Project | C Exercises Due |
 | 3 - 9/13 | Syntax and Semantics | Chapter 3 | | |
 | 3 - 9/15 | Syntax and Semantics | | | |
-| 4 - 9/18 | | | | |
-| 4 - 9/20 | | | | |
-| 4 - 9/22 | | | | |
-| 5 - 9/25 | | | | |
-| 5 - 9/27 | | | | |
+| 4 - 9/18 | Lexical and Syntax Analysis | | | |
+| 4 - 9/20 | Lexical and Syntax Analysis | | | |
+| 4 - 9/22 | Regular Expressions | | RegEx Assignment | |
+| 5 - 9/25 | Lex and Yacc | | | |
+| 5 - 9/27 | Lex and Yacc | | Lex and Yacc | |
 | 5 - 9/29 | | | | |
 | 6 - 10/02 | | | | |
 | 6 - 10/04 | | | | |
 | 6 - 10/06 | | | | |
 | 7 - 10/09 | | | | |
 | 7 - 10/11 | | | | |
-| 7 - 10/13 | | | | |
+| 7 - 10/13 | Midterm exam | | | |
 | 8 - 10/16 | | | | |
 | 8 - 10/18 | | | | |
 | 8 - 10/20 | | | | |
