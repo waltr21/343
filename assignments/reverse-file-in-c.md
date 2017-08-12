@@ -15,6 +15,8 @@ int read_file( char* filename, char **buffer );
 int write_file( char* filename, char *buffer, int size);
 ```
 
+**DO NOT CHANGE THESE FUNCTION SIGNATURES IN ANY WAY!**
+
 You will need a ```file_utils.c``` file with you code implemented.
 
 You will need a ```reverse.c``` file with code that accepts command arguments, includes a main function, and calls the functions from the included files.
@@ -23,28 +25,26 @@ Use ```fprintf( stderr, "ERROR MESSAGE" );``` to print error messages. This will
 
 **Hints!**
 
-Remember that you import \*.h files only
+- Remember that you import \*.h files only (never import a \*.c file).
 
-Do not pass \*.h files to the compiler; they will be included if you use the ```#include``` statement in your \*.c files.
+- Do not pass \*.h files to the compiler; they will be included if you use the ```#include``` statement in your \*.c files.
 
-Remember… C passes by value only. If you want to pass a pointer to a function and have that function change where the pointer points you will instead need to pass a pointer to a pointer and have the function modify the data in the pointer (the pointer to which the pointer points!) This is essential if you want to perform a malloc inside of a function and have a reference to that memory persist after the function exits.
+- Remember… C passes by value only. If you want to pass a pointer to a function and have that function change where the pointer points you will instead need to pass a pointer to a pointer and have the function modify the data in the pointer (the pointer to which the pointer points!) This is essential if you want to perform a malloc inside of a function and have a reference to that memory persist after the function exits.
 
-You can find out the size of a file with the following code (on EOS):
+- You can find out the size of a file with the following code (on EOS - this is the Linux method.  If you use another OS you must find another way.):
 
-```C
-struct stat st;
-stat(filename, &st);
-int size = st.st_size;
-```
+  ```C
+  struct stat st;
+  stat(filename, &st);
+  int size = st.st_size;
+  ```
 
-NOTE! You will need to ```#include <sys/stat.h>```.
+  **NOTE!** You will need to ```#include <sys/stat.h>```.
 
-Submission Process and Deadline
+## Submission Process and Deadline
 
 This assignment is due on Friday, February 3 at midnight. Submit as follows:
 
-put the text document into the project directory you used for your project
-zip or tar the folder into an archive called YOUR_NAME_Project_1-C_343.{zip|tar.gz} using whichever extension is correct for the file type you have chosen to use.
-Upload via the Dropbox link DROPBOX
+>Upload to Blackboard.
 
 If you have questions about this process, see me immediately.
