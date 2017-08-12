@@ -21,20 +21,20 @@ Schedule
 | 5 - 9/27 | Lex and Yacc | | Lex and Yacc | |
 | 5 - 9/29 | | | | |
 | 6 - 10/02 | Language Spotlight - Python | | | |
-| 6 - 10/04 | Language Spotlight - Python | | Python Project | |
-| 6 - 10/06 | | | | |
-| 7 - 10/09 | | | | |
-| 7 - 10/11 | | | | |
+| 6 - 10/04 | Language Spotlight - Python | | | |
+| 6 - 10/06 | Language Spotlight - Ruby | | | Python/Ruby Project |
+| 7 - 10/09 | Names, Bindings, Scope | | | |
+| 7 - 10/11 | Names, Bindings, Scope | | | |
 | 7 - 10/13 | Midterm exam | | | |
-| 8 - 10/16 | | | | |
-| 8 - 10/18 | | | | |
-| 8 - 10/20 | | | | |
-| 9 - 10/23 | | | | |
-| 9 - 10/25 | | | | |
-| 9 - 10/27 | | | | |
-| 10 - 10/30 | | | | |
-| 10 - 11/01 | | | | |
-| 10 - 11/03 | | | | |
+| 8 - 10/16 | Data Types | | | |
+| 8 - 10/18 | Data Types | | | |
+| 8 - 10/20 | Expression and Assignment Statements | | | |
+| 9 - 10/23 | Expression and Assignment Statements | | | |
+| 9 - 10/25 | Statement Level Control Structures | | | |
+| 9 - 10/27 | Subprograms | | | |
+| 10 - 10/30 | Implementing Subprograms | | | |
+| 10 - 11/01 | Abstract Data Types and Encapsulation | | | |
+| 10 - 11/03 | Abstract Data Types and Encapsulation | | | |
 | 11 - 11/06 | | | | |
 | 11 - 11/08 | | | | |
 | 11 - 11/10 | | | | |
@@ -49,5 +49,5 @@ Schedule
 | 14 - 12/01 | | | | |
 | 15 - 12/04 | | | | |
 | 15 - 12/06 | | | | |
-| 15 - 12/08 | | | | |
+| 15 - 12/08 | Logic Programming | | | |
 | 16 - 12/xx | Final Exam | | | |
