@@ -10,7 +10,7 @@ Schedule
 | 1 - 9/01 | [Language Evaluation](https://gitpitch.com/irawoodring/343/master?p=language-evaluation "Language evaluation slides") | | | |
 | 2 - 9/04 | Labor Day - No class | | | |
 | 2 - 9/06 | Language Spotlight - C (Procedural) | http://www.learn-c.org/ | Explore and understand [this code](https://github.com/irawoodring/pointer_perils "Pointers in C")| |
-| 2 - 9/08 | Language Spotlight - C (Procedural) | Follow tutorials | C Exercises | |
+| 2 - 9/08 | Language Spotlight - C (Procedural) | Follow tutorials | [C Exercises](./assignments/reverse-file-in-c.md "Project 1 in C") | |
 | 3 - 9/11 | Architecture and Language History | Chapter 2 | C Project | C Exercises Due |
 | 3 - 9/13 | Syntax and Semantics | Chapter 3 | | |
 | 3 - 9/15 | Syntax and Semantics | | | |
