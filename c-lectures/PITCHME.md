@@ -209,6 +209,9 @@ It turns out that most systems pre-compile common libraries.  This gives us mult
 - We save disk space by not having to include these libraries in our own projects.
 
 - We save compilation time by not having to re-compile these prebuilt libraries.
+---
+**Compilation**
+***
 
 Which brings us to a very important point:
 
@@ -222,3 +225,11 @@ The linker is often automatically called by the compiler (the commands provided 
 It turns out though, there are two types of linking:
 
 **Static Linking** and **Dynamic Linking**.
+---
+**Compilation**
+***
+
+Static linking pulls in all of the code needed for a program to run.  This results in a larger executable, but guarantees that the program can run on the target system.
+
+Dynamic linking uses **method stubs** when linking to a system library.  These executables are not as portable.  The target system must provide the required libraries the stubs point to or the program can't run.  This is the default linking method.
+---
