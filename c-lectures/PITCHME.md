@@ -122,7 +122,6 @@ int handyFunction(int num);
 ```
 
 This tells the compiler that there is a definition for ```handyFunction``` that takes an ```int``` and returns an ```int```.
-```
 ---
 At the top of my ```my_prog.c``` file, I can tell the compiler about the library file with the command:
 
@@ -135,4 +134,35 @@ At the top of my ```my_prog.c``` file, I can tell the compiler about the library
 ```C
 #include <library.h>
 ```
+---?code=./samples/my_prog.c
+---?code=./samples/library.h
+---?code=./samples/library.c
+---
+We compile this code with the command
+
+```
+clang my_prog.c library.c
+```
+
+or
+
+```
+gcc my_prog.c library.c
+```
+
+This will output a file called ```a.out```.  We run that with the command
+
+```
+./a.out
+```
+---
+By the way, ```a.out``` stands for "assembly out".  It is a holdover from the early days at Bell Labs.  It was kept through the B, BCPL, and early C phases because folks were used to it.
+
+You can provide an optional executable name with the ```-o FILENAME``` flag such as:
+
+```
+clang my_prog.c library.c -o my_executable
+```
+
+Same syntax applies to GCC.
 ---
