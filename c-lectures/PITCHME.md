@@ -72,7 +72,7 @@ Data types are very closely related to underlying hardware.
 
 Many higher-level languages don't provide the capabilities that C has for interacting so closely with hardware.  This makes C a better choice for systems programming and speed-intensive tasks.
 ---
-**Overview**
+**Compilation**
 ***
 
 Every computer processor has an instruction set.  This set of instructions are the ONLY things a processor knows how to do.  Different brands and types of processors have different instruction sets.
@@ -81,12 +81,12 @@ C requires the use of a compiler to create the libraries and executables needed 
 
 The compiler translates higher-level C code into machine code that a processor can understand.
 ---
-**Overview**
+**Compilation**
 ***
 
 In this class we will use either the Clang compiler or the GCC compiler.  Both are on EOS, and freely available should you wish to install them on your own machines.
 ---
-**Overview**
+**Compilation**
 ***
 
 A program written in C is some executable code (usually) linked to other libraries.
@@ -95,7 +95,7 @@ These libraries are usually pieces of code written by a community of advanced pr
 
 Usually these libraries have been in development for many years, are very robust, efficient, and secure code.  We should use them.
 ---
-**Overview**
+**Compilation**
 ***
 
 C gives us facilities to separate out our code into interface and implementation files.
@@ -104,7 +104,7 @@ Interface files describe data types, functions, etc. that may be used in a libra
 
 Implementation files are the actual code files that provide the instructions needed to complete some task.  They are provided in \*.c files.
 ---
-**Overview**
+**Compilation**
 ***
 
 The C compiler compiles every file separately.  So if we write a program that makes use of a library, we need to tell C that we are using the library correctly.  For instance:
@@ -151,7 +151,7 @@ Bloats the code.  Not good.
 ---
 Enter **include guards**.
 
-Include guards make define some name in memory.  If it has already been defined, we don't redefine it.  So:
+Include guards allow us to define some name in memory.  If it has already been defined, we don't redefine it.  So we surround our \*.h file code with something like this:
 
 ```C
 #ifndef     __H_OUR_NAME__
@@ -160,6 +160,7 @@ Include guards make define some name in memory.  If it has already been defined,
 ... *interface code* ...
 
 #endif
+
 ```
 ---?code=./c-lectures/samples/my_prog.c
 ---?code=./c-lectures/samples/library.h
@@ -193,3 +194,31 @@ clang my_prog.c library.c -o my_executable
 
 Same syntax applies to GCC.
 ---
+**Compilation**
+***
+
+Notice that on the command-line we pass the names of ALL the \*.c files to the compiler.  We DO NOT pass the \*.h files!
+
+However, there is no need to pass the name of the system libraries.  The <> around their names indicate to the compiler to search through the system library path.
+
+It turns out that most systems pre-compile common libraries.  This gives us multiple benefits:
+---
+**Compilation**
+***
+
+- We save disk space by not having to include these libraries in our own projects.
+
+- We save compilation time by not having to re-compile these prebuilt libraries.
+
+Which brings us to a very important point:
+
+The compiler doesn't actually create executable files.  It creates object files.  The **liner** links together the files into an executable.
+---
+**Compilation**
+***
+
+The linker is often automatically called by the compiler (the commands provided earlier will automatically cause this to happen).
+
+It turns out though, there are two types of linking:
+
+**Static Linking** and **Dynamic Linking**.
