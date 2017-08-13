@@ -134,7 +134,7 @@ At the top of my ```my_prog.c``` file, I can tell the compiler about the library
 ```C
 #include <library.h>
 ```
----?code=./samples/my_prog.c
+---?code=./c-lectures/samples/my_prog.c
 ---?code=./samples/library.h
 ---?code=./samples/library.c
 ---
