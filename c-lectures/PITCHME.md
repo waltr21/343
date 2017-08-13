@@ -134,9 +134,36 @@ At the top of my ```my_prog.c``` file, I can tell the compiler about the library
 ```C
 #include <library.h>
 ```
+---
+So... we know that each file is compiled separately.
+
+We provide the interfaces via the ```#include``` statements.
+
+This causes the code to be pulled into the project.
+
+Can anyone see a potential problem?
+---
+What happens if we ```#include``` a library, and then a library ```#include```s the same library?
+
+The code would be sourced into the project more than once.
+
+Bloats the code.  Not good.
+---
+Enter **include guards**.
+
+Include guards make define some name in memory.  If it has already been defined, we don't redefine it.  So:
+
+```C
+#ifndef     __H_OUR_NAME__
+#define     __H_OUR_NAME__
+
+... *interface code* ...
+
+#endif
+```
 ---?code=./c-lectures/samples/my_prog.c
----?code=./samples/library.h
----?code=./samples/library.c
+---?code=./c-lectures/samples/library.h
+---?code=./c-lectures/samples/library.c
 ---
 We compile this code with the command
 
