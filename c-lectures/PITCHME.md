@@ -233,3 +233,52 @@ Static linking pulls in all of the code needed for a program to run.  This resul
 
 Dynamic linking uses **method stubs** when linking to a system library.  These executables are not as portable.  The target system must provide the required libraries the stubs point to or the program can't run.  This is the default linking method.
 ---
+**Compilation**
+***
+
+**When should I use each method?**
+
+Most of the time you will just want to link dynamically.  This keeps the executable small and relies upon the system libraries.  Since system libraries are patched often to fix bugs/security holes, this is a good practice.
+
+If you happen to be coding and need very specific versions of a library for your code to work correctly, you may wish to compile statically.  This will pull in all of the code and libraries needed for the executable to run on the target system.
+---
+**Program Layout**
+***
+
+Every C program has an entry point called ```main```.  This function should look like this:
+
+```C
+int main(int argc, char** argv){
+  ...
+}
+```
+
+Note that you may see programmers write similar but different function signatures for ```main```, but those are not best practice.
+---
+**Program Layout**
+***
+
+Let's dissect the signature a bit.
+
+```C
+int main(int argc, char** argv){
+  ...
+}
+```
+
+The first ```int``` is the return type.  The ```int argc``` is a parameter to the function ```main``` of type ```int```, and the ```char** argv``` is a parameter to the function ```main``` of type pointer to a pointer to a ```char```.
+---
+**Program Layout**
+***
+
+The return type of ```int``` means that a C program will return a numeric value.  This value corresponds to an error code.  This allows us to tell the operating system if the program exited cleanly, or if it exited due to some error state.
+
+This allows us to automate program runs!
+---
+**Program Layout**
+***
+
+The two parameters sent to the ```main``` function are an ```int``` telling the program how many command-line arguments were passed to the program, and a pointer to a pointer to a ```char```.  As we will see shortly, this is how C creates an array of strings.  These strings are the command-line arguments.
+
+**NOTE:** the first argument, argv[0] is the program name!
+---
