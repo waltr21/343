@@ -283,3 +283,58 @@ The two parameters sent to the ```main``` function are an ```int``` telling the 
 **NOTE:** the first argument, argv[0] is the program name!
 ---
 ---?code=./c-lectures/samples/args.c
+---
+**Program Layout**
+***
+
+If we compile and run this program with different input, we get the following outputs:
+---
+```
+Iras-MacBook-Pro:samples woodriir$ ./a.out
+Howdy all!
+
+This program was provided with 1 command-line arguments.
+
+These arguments are:
+====================
+
+	./a.out
+```
+---
+```
+Iras-MacBook-Pro:samples woodriir$ ./a.out Hi there everybody
+Howdy all!
+
+This program was provided with 4 command-line arguments.
+
+These arguments are:
+====================
+
+	./a.out
+	Hi
+	there
+	everybody
+```
+---
+```
+Iras-MacBook-Pro:samples woodriir$ ./a.out "Hi there everybody"
+Howdy all!
+
+This program was provided with 2 command-line arguments.
+
+These arguments are:
+====================
+
+	./a.out
+	Hi there everybody
+```
+---
+**Program Layout**
+***
+
+So, a few notes.  There is always 1 command-line argument provided.  It is the executable's name.
+
+If we wish to group arguments together we need to place them inside of quotes.
+---
+**Program Layout**
+***
