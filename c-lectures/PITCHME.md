@@ -282,3 +282,4 @@ The two parameters sent to the ```main``` function are an ```int``` telling the 
 
 **NOTE:** the first argument, argv[0] is the program name!
 ---
+---?code=./c-lectures/samples/args.c
