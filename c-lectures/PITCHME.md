@@ -338,3 +338,93 @@ If we wish to group arguments together we need to place them inside of quotes.
 ---
 **Program Layout**
 ***
+
+C programs are collections of statements that change state of some memory.
+
+Commonly used collections of statements may be abstracted out and placed into units called functions.
+---
+**Program Layout**
+***
+
+A function must be declared before it is used.
+
+We can do that multiple ways:
+
+- By placing the function's declaration before the code that calls that function in the same file
+
+- Or by placing the declaration in an interface file (\*.h) and ```#include```ing it.
+---
+**Program Layout**
+***
+
+We will often talk about a function's *signature*.  This is the return type, name, and parameters a function takes.
+
+```C
+return_type function_name(parameter_type parameter_name, ...repeat as needed...)
+```
+
+For example:
+
+```C
+double calc_tax(float amount, double tax_rate);
+```
+---
+**Program Layout**
+***
+
+Functions may take different parameters.  This means they have different signatures:
+
+```C
+double calc_tax(float amount, double tax_rate);
+```
+
+is a different signature from
+
+```C
+double calc_tax(float amount, float tax_rate);
+```
+---
+**Data Types**
+***
+
+C provides a few basic data types.
+
+These can be separated into categories:
+
+**Void**
+
+**Integer Types**
+
+**Floating Point Types**
+---
+**Data Types**
+***
+
+When no type is or can be supplied, the type is
+
+```void```
+---
+**Data Types**
+***
+
+**Integer Types**
+
+```char```, ```short```, ```int```, ```long``` types hold integer (non-floating point) values.  These types may also be ```unsigned```, which increases the maximum value they can hold, but removes the ability to store a negative value.
+
+Note that there are quite a few more types than listed here; types such as ```long long```, ```long long int```, ```signed``` and ```unsigned``` ```long long int```s, etc.  
+---
+**Data Types**
+***
+
+**Integer Types**
+
+Wikipedia has a nicely tabled list, including format specifiers for how to print these values:
+
+https://en.wikipedia.org/wiki/C_data_types
+---
+**Data Types**
+***
+
+**Integer Types**
+
+The C standard does not dictate how many bytes each data type must occupy; it DOES however provide minimum numbers of bytes and relationships between types.
