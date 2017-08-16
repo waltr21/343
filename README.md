@@ -48,8 +48,8 @@ Schedule
 | 13 - 11/24 | Thanksgiving Recess | | | |
 | 14 - 11/27 | | | | |
 | 14 - 11/29 | | | | |
-| 14 - 12/01 | | | | |
-| 15 - 12/04 | | | | |
-| 15 - 12/06 | Logic Programming | | | |
+| 14 - 12/01 | Logic Programming | | | |
+| 15 - 12/04 | Logic Programming | | | |
+| 15 - 12/06 | Language Presentations | | | |
 | 15 - 12/08 | Language Presentations                                  | | | |
 | 16 - 12/xx | Final Exam | | | |
