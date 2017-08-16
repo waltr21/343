@@ -12,7 +12,7 @@ Schedule
 | 2 - 9/06 | Architecture and Language History | Chapter 2 | | |
 | 2 - 9/08 | Architecture and Language History | | | |
 | 3 - 9/11 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | http://www.learn-c.org/ | Explore and understand [this code](https://github.com/irawoodring/pointer_perils "Pointers in C")| |
-| 3 - 9/13 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | Follow tutorials | [C Exercises](./assignments/reverse-file-in-c.md "Project 1 in C") | |
+| 3 - 9/13 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | Follow tutorials | [C Project](./assignments/reverse-file-in-c.md "Project 1 in C") | |
 | 3 - 9/15 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | | | |
 | 4 - 9/18 | Syntax and Semantics | Chapter 3 | | |
 | 4 - 9/20 | Syntax and Semantics | | | C Exercises Due (Blackboard)|
@@ -20,7 +20,7 @@ Schedule
 | 5 - 9/25 | Lexical and Syntax Analysis | | | |
 | 5 - 9/27 | Regular Expressions | | RegEx Assignment | |
 | 5 - 9/29 | Lex and Yacc | | | |
-| 6 - 10/02 | Lex and Yacc | | Lex and Yacc | |
+| 6 - 10/02 | Lex and Yacc | | Lex and Yacc | RegEx Assignment Due (Blackboard) |
 | 6 - 10/04 | Object Oriented Programming | | | |
 | 6 - 10/06 | Object Oriented Programming | | | |
 | 7 - 10/09 | Language Spotlight - Python (Object Oriented)| | | |
