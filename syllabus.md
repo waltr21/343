@@ -1,4 +1,4 @@
-### CIS 343 - Structure of Programming Languages
+# CIS 343 - Structure of Programming Languages
 
 ## Course Description
 
@@ -24,14 +24,14 @@ The course focuses on fundamental issues in design and implementation of program
 
 ## Policies and procedures
 
-# Attendance
+### Attendance
 
 Attendance is required.  Should you happen to miss a class, any assignments due on that day must have been submitted before the class.  Exams can not be made up without prior approval of the instructor (i.e. not the day of).
 Valid reasons for missing a class are documented emergencies, military commitments, etc.
 
 Note that I do take attendance and use it in calculation of grades.
 
-# Academic Honesty
+### Academic Honesty
 
 Assignments are to be completed individually unless otherwise noted by the instructor.  Please note that this means:
 
@@ -41,18 +41,18 @@ Assignments are to be completed individually unless otherwise noted by the instr
 
 Copying someone else’s code is plagiarism.  This is considered academic dishonesty.  Academic dishonesty can result in a ‘0’ on assignments and a referral to our Academic Honesty Committee for further review.
 
-# Contacting Me
+### Contacting Me
 
 I am often on campus.  Feel free to come by my office anytime I am there, regardless of whether it is a posted “office hour.”  However, the easiest method of communicating with me is via our class's Slack channel.  Instructions for signing up for this channel are available on Blackboard.  I leave this channel up on my computer constantly, and receive emails when a new message is received.
 
 I prefer Slack to answer questions as any question asked (outside of a private message) can be seen by the entire class.  I encourage you to use this method to communicate with your class peers.  You can share code samples and other resources, and discuss assignments.
 
-# Disability Support resources
+### Disability Support resources
 
 Any student who requires accommodation because of a physical or learning disability must contact Disability Support Resources (http://www.gvsu.edu/dss) at 616-331-2490 as soon as possible. After you have documented your disability, please make an appointment or see me to discuss your specific needs.
 If you have a disability and think you will need assistance evacuating this classroom and/or building in an emergency situation, please make me aware so we can develop a plan to assist you.
 
-# Projects and Homework
+### Projects and Homework
 
 I expect you to follow the departmental style guide for all source code.  It can be found at
 
@@ -62,7 +62,7 @@ Note that it is specifically about Java coding but is relatable enough for other
 
 Assignments may be turned in up to two days late, with a 10% penalty per day.  There is no credit granted for programs that do not compile.  If you have “test code” in your source code be sure to comment it out so that your code compiles.  I often automate testing of your code using unit testing frameworks.  If your code does not compile my testing will not work.
 
-# Grading
+### Grading
 
 Your grade consists of the following:
 
