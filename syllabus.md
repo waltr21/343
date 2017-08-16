@@ -66,8 +66,8 @@ Assignments may be turned in up to two days late, with a 10% penalty per day.  T
 
 Your grade consists of the following:
 
-|Category|Percentage of Grade|
-|========|===================|
+| Category |Percentage of Grade |
+|----------|--------------------|
 | Homework/Quizzes/Attendance/In-class Assignments | 12% |
 | Midterm Exam | 18% |
 | Programming Assignments | 40% |
