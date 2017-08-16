@@ -20,9 +20,12 @@ int write_file( char* filename, char *buffer, int size);
 You will need a ```file_utils.c``` file with you code implemented.
 
 You will need a ```reverse.c``` file with code that accepts command arguments, includes a main function, and calls the functions from the included files.
+
 C doesn’t have exceptions so you must create exception handling on your own. You must perform checks to make sure that memory allocation calls complete correctly and that file read/write operations complete correctly.
+
 Use ```fprintf( stderr, "ERROR MESSAGE" );``` to print error messages. This will send them to the error stream instead of the standard output stream.
 
+Look closely at the function signatures!  The way this project is written requires that a pointer to a pointer be passed to a function.  This is done because a ```malloc``` to request memory in the function would be lost if we merely passed the pointer (look at https://github.com/irawoodring/pointer_perils)
 ## Hints!
 
 - Remember that you import \*.h files only (never import a \*.c file).
@@ -50,6 +53,7 @@ Rubric:
 | Compilation | Compiles with no errors or warnings | Compiles but with warnings | Doesn't compile |
 | Style Guide | Perfectly adheres to style guide | Minor style guide mistakes | Fails to adhere to style guide |
 | Follows Project Specifications | No requirements omitted | 1 - 2 requirements omitted | More than 2 requirements omitted |
+| Error handling | Gracefully handles memory and disk errors | Handles at least one type of error gracefully | Does not include error handling |
 | On time | Submitted before due date and time | Submitted up to 1 day late | Submitted more than 1 day late |
 
 ## Submission Process and Deadline
