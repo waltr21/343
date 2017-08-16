@@ -6,7 +6,7 @@ Ira Woodring
 ***
 
 The C Programming Language
----
+--- 
 **History**
 ***
 
@@ -583,4 +583,78 @@ https://github.com/irawoodring/pointer_perils
 Compile it, and step through it until you understand what is happening.
 
 Your first C assignment will be made VASTLY easier if you understand this code.
+---
+**Memory Management**
+***
+
+Recall from our architecture lecture that there are two memory areas our programs make use of, the **stack** and the **heap**.
+
+When C is compiled, space is allocated for all static variables (variables whose sizes will not change) on the stack.  
+
+But what if we need a data structure of changing size?
+---
+**Memory Management**
+**
+
+Why not just declare an array?
+
+```C
+int grades[100];
+```
+
+This is perfectly fine.  Except the array can never get bigger than 100.
+
+If we code this in such a manner the compiler will reserve enough space for 100 ```ints``` on the stack.  Because of the nature of the stack (new stack frames are stored on it, remember?) we can't increase the size of this space at run time.
+---
+**Memory Management**
+**
+
+Therefore we have to declare the space on the heap.  We do that via the ```malloc``` or ```calloc``` (part of ```stdlib.h```).
+
+```void *malloc(size_t size)```
+```void *calloc(size_t nitems, size_t size)```
+
+Note that both of these functions return a pointer!
+---
+**Memory Management**
+**
+
+We use malloc as follows:
+
+```C
+int* my_memory = (int*)malloc(50 * sizeof(int));
+```
+
+This line asks the system to reserve a segment of memory big enough to hold 50 integers.  Since ```malloc``` returns a ```void*``` we must perform an implicit cast to change the type to ```int*```.
+---
+**Memory Management**
+**
+
+We can now use this segment of memory just as we would a normal array!
+
+```C
+my_memory[0] = 42;
+my_memory[42] = 100;
+```
+
+This works because an array in C is really just a pointer to the first element in an array!
+---
+**Memory Management**
+**
+
+Note that this doesn't just work for basic types.  Recall the ```struct student``` we had earlier?
+
+```C
+typedef struct student_type {
+  int student_number;
+  float gpa;
+  char class;
+} student;
+```
+
+We could declare an array to hold 50 of these as such:
+
+```C
+student* my_students = (student*) malloc(50 * sizeof(student));
+```
 ---
