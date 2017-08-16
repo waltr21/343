@@ -46,7 +46,7 @@ Use ```fprintf( stderr, "ERROR MESSAGE" );``` to print error messages. This will
 Rubric:
 
 | Criteria | 5 Points | 3 Points | 0 Points |
-|==========|==========|==========|==========|
+|----------|----------|----------|----------|
 | Compilation | Compiles with no errors or warnings | Compiles but with warnings | Doesn't compile |
 | Style Guide | Perfectly adheres to style guide | Minor style guide mistakes | Fails to adhere to style guide |
 
