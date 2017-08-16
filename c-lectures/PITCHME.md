@@ -505,7 +505,7 @@ int* y = &x;
 
 The ```&``` symbol here can be read as "address of".  We are saying that ```y``` is a pointer variable that points to an ```int```.  We are setting the value of ```y``` to the memory address of where ```x``` is stored.
 ---
-Additionally, we can access the data in the memory location that the pointer points to.  We can do this by using the ```*``` dereferencing operator:
+Additionally, we can access the data in the memory location that the pointer points to.  We can do this by using the ```*``` (called the dereferencing) operator:
 
 ```C
 int x = 42;
@@ -513,3 +513,33 @@ int* y = &x;
 *y = 45;          // If we printed x it would now print 45!
 ```
 ---
+**Data Types - Pointers**
+***
+
+But... why do we need pointers?
+---
+**Data Types - Pointers**
+***
+
+C can only return a data types value.
+
+We are used to passing by reference in Java (for the most part).
+
+Passing by reference means that we don't pass a data structure to or from a function - we pass a reference to that structure.  This keeps things fast as the size of the data structure increases.  But C doesn't have this ability.
+---
+**Data Types - Pointers**
+***
+
+C passes the value of the data type to and from functions.  So, if we have the following code:
+
+```C
+int doStuff(int x){ ... }
+int main(int argc, char** argv){
+  int x = 42;
+  int y = doStuff(x);
+}
+
+```x``` is not passed to the function.  ```42``` is passed to the function.
+---
+**Data Types - Pointers**
+***
