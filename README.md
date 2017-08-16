@@ -38,10 +38,10 @@ Schedule
 | 11 - 11/06 | Implementing Subprograms | | | |
 | 11 - 11/08 | Abstract Data Types and Encapsulation | | | |
 | 11 - 11/10 | Abstract Data Types and Encapsulation | | | |
-| 12 - 11/13 | | | | |
-| 12 - 11/15 | | | | |
-| 12 - 11/17 | Functional Programming | | | |
-| 13 - 11/20 | Functional Programming | | Lisp Assignment | |
+| 12 - 11/13 | Functional Programming | | | |
+| 12 - 11/15 | Functional Programming / Lisp | | | |
+| 12 - 11/17 | Lisp | | Lisp Assignment | |
+| 13 - 11/20 | | |  | |
 | 13 - 11/22 | Thanksgiving Recess | | | |
 | 13 - 11/24 | Thanksgiving Recess | | | |
 | 14 - 11/27 | | | | |
