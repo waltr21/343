@@ -404,27 +404,112 @@ When no type is or can be supplied, the type is
 
 ```void```
 ---
-**Data Types**
+**Data Types - Integer Types**
 ***
-
-**Integer Types**
 
 ```char```, ```short```, ```int```, ```long``` types hold integer (non-floating point) values.  These types may also be ```unsigned```, which increases the maximum value they can hold, but removes the ability to store a negative value.
 
 Note that there are quite a few more types than listed here; types such as ```long long```, ```long long int```, ```signed``` and ```unsigned``` ```long long int```s, etc.  
 ---
-**Data Types**
+**Data Types - Integer Types**
 ***
-
-**Integer Types**
 
 Wikipedia has a nicely tabled list, including format specifiers for how to print these values:
 
 https://en.wikipedia.org/wiki/C_data_types
 ---
-**Data Types**
+**Data Types - Integer Types**
 ***
 
-**Integer Types**
-
 The C standard does not dictate how many bytes each data type must occupy; it DOES however provide minimum numbers of bytes and relationships between types.
+---
+**Data Types - Floating Point Types**
+***
+
+C provides for ```float```, ```double```, and ```long double``` data types.  These data types are stored via the IEEE 754 standard (we will talk about this later; hardware class will study it in depth.)
+---
+**Data Types - Record Types**
+***
+
+C provides two mechanisms for storing record types, the ```struct``` and the ```union```.
+
+Both a ```struct``` and a ```union``` are aggregate types, meaning they are types made up of other types.  For instance, if you wanted to create a data type that could hold student information, you may define a ```struct``` as follows:
+---
+```
+struct student {
+  int g_number;
+  float gpa;
+  char class;
+};
+```
+
+You would declare one as such:
+
+```
+struct student s;
+```
+---
+Alternatively, you can define the struct as a type using the ```typedef``` keyword:
+
+```
+typedef struct student_type {
+  int g_number;
+  float gpa;
+  char class;
+} student;
+```
+
+And declare it:
+
+```
+student s;
+```
+---
+Either way, you would then be able to use ```s``` by accessing its members:
+
+```
+s.g_number = 300746283;
+s.gpa = 3.874;
+s.class = 's';
+```
+---
+**Data Types - Record Types**
+***
+
+```union``` types are very similar to ```struct``` types, except ```union```s only store one member at a time.  These are usually only useful to embedded system programmers with lower memory requirements.  This is because the ```union``` only allocates enough memory for the largest of its members.
+
+For instance, if a union held a member for an ```int``` and a ```float```, it would only occupy enough space for a float (the larger data type).
+---
+**Data Types - Pointers**
+***
+
+Pointers are data types that store a memory location.  They are extremely useful but often confusing to new programmers in the language.
+
+A pointer may be of type ```void*``` but will usually be typed the same as the type of data its memory points to.
+---
+For instance:
+
+```C
+int x;
+int* y;
+```
+
+These are two COMPLETELY DIFFERENT data types.  The first declares an ```int``` variable.  The second declares a variable that holds a memory address.  It just so happens that the memory address this value points to is an ```int```.
+---
+This allows us to do something like this:
+
+```C
+int x = 42;
+int* y = &x;
+```
+
+The ```&``` symbol here can be read as "address of".  We are saying that ```y``` is a pointer variable that points to an ```int```.  We are setting the value of ```y``` to the memory address of where ```x``` is stored.
+---
+Additionally, we can access the data in the memory location that the pointer points to.  We can do this by using the ```*``` dereferencing operator:
+
+```C
+int x = 42;
+int* y = &x;
+*y = 45;          // If we printed x it would now print 45!
+```
+---
