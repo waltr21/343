@@ -544,3 +544,43 @@ int main(int argc, char** argv){
 ---
 **Data Types - Pointers**
 ***
+
+What is actually happening is that a new area of memory is setup for the function to work in.  In that new area of memory the function gets a copy of the data to work on.  All work occurs in the function's memory space, on the function's variables.  This means any change you make to ```x``` only changes the function's local copy.
+---
+**Data Types - Pointers**
+***
+
+It is sometimes easier to think of this by adding to the variable's name.  We can think of the first ```x``` as ```main's x``` or ```main.x``` and the second ```x``` as ```doStuff's x``` or ```doStuff.x```.
+
+This helps us to remember they are two distinct variables.
+---
+**Data Types - Pointers**
+***
+
+Seriously though... this sounds like a stupid pain in the butt.
+
+What's the point? (no pun intended...)
+---
+**Data Types - Pointers**
+***
+
+Imagine using a large data structure, perhaps an array with millions of elements.  If C didn't have pointers, since it must pass by value it would have to produce a copy of the entire array for a function to work on it.
+
+Pointers are much, much faster.
+---
+**Data Types - Pointers**
+***
+
+They also allow us to do some neat things like pass functions as parameters to other functions!
+---
+**Data Types - Pointers**
+***
+
+I have provided some tutorial code for help in understanding pointers.  Clone the project here:
+
+https://github.com/irawoodring/pointer_perils
+
+Compile it, and step through it until you understand what is happening.
+
+Your first C assignment will be made VASTLY easier if you understand this code.
+---
