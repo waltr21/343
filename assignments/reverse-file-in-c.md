@@ -1,4 +1,4 @@
-### Reverse a file
+# Reverse a file
 
 For this project you will create a utility that will take as its parameters two filenames. The two filenames will be an input file and an output file. The usage from the command line will look like this:
 
@@ -23,7 +23,7 @@ You will need a ```reverse.c``` file with code that accepts command arguments, i
 C doesn’t have exceptions so you must create exception handling on your own. You must perform checks to make sure that memory allocation calls complete correctly and that file read/write operations complete correctly.
 Use ```fprintf( stderr, "ERROR MESSAGE" );``` to print error messages. This will send them to the error stream instead of the standard output stream.
 
-**Hints!**
+## Hints!
 
 - Remember that you import \*.h files only (never import a \*.c file).
 
@@ -40,6 +40,16 @@ Use ```fprintf( stderr, "ERROR MESSAGE" );``` to print error messages. This will
   ```
 
   **NOTE!** You will need to ```#include <sys/stat.h>```.
+
+## Grading
+
+Rubric:
+
+| Criteria | 5 Points | 3 Points | 0 Points |
+|==========|==========|==========|==========|
+| Compilation | Compiles with no errors or warnings | Compiles but with warnings | Doesn't compile |
+| Style Guide | Perfectly adheres to style guide | Minor style guide mistakes | Fails to adhere to style guide |
+
 
 ## Submission Process and Deadline
 
