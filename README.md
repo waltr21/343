@@ -1,4 +1,4 @@
-# 343
+# 343 - Structure of Programming Languages
 CIS 343 Notes and code samples.
 
 Schedule
