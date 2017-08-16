@@ -538,6 +538,7 @@ int main(int argc, char** argv){
   int x = 42;
   int y = doStuff(x);
 }
+```
 
 ```x``` is not passed to the function.  ```42``` is passed to the function.
 ---
