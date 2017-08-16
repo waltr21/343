@@ -6,7 +6,7 @@ Ira Woodring
 ***
 
 The C Programming Language
---- 
+---
 **History**
 ***
 
@@ -594,7 +594,7 @@ When C is compiled, space is allocated for all static variables (variables whose
 But what if we need a data structure of changing size?
 ---
 **Memory Management**
-**
+***
 
 Why not just declare an array?
 
@@ -607,7 +607,7 @@ This is perfectly fine.  Except the array can never get bigger than 100.
 If we code this in such a manner the compiler will reserve enough space for 100 ```ints``` on the stack.  Because of the nature of the stack (new stack frames are stored on it, remember?) we can't increase the size of this space at run time.
 ---
 **Memory Management**
-**
+***
 
 Therefore we have to declare the space on the heap.  We do that via the ```malloc``` or ```calloc``` (part of ```stdlib.h```).
 
@@ -617,7 +617,7 @@ Therefore we have to declare the space on the heap.  We do that via the ```mallo
 Note that both of these functions return a pointer!
 ---
 **Memory Management**
-**
+***
 
 We use malloc as follows:
 
@@ -628,7 +628,7 @@ int* my_memory = (int*)malloc(50 * sizeof(int));
 This line asks the system to reserve a segment of memory big enough to hold 50 integers.  Since ```malloc``` returns a ```void*``` we must perform an implicit cast to change the type to ```int*```.
 ---
 **Memory Management**
-**
+***
 
 We can now use this segment of memory just as we would a normal array!
 
@@ -640,7 +640,7 @@ my_memory[42] = 100;
 This works because an array in C is really just a pointer to the first element in an array!
 ---
 **Memory Management**
-**
+***
 
 Note that this doesn't just work for basic types.  Recall the ```struct student``` we had earlier?
 
@@ -658,3 +658,25 @@ We could declare an array to hold 50 of these as such:
 student* my_students = (student*) malloc(50 * sizeof(student));
 ```
 ---
+**Memory Management**
+***
+
+The problem?  Because we aren't dealing with data on the stack we have to manage the memory ourselves.
+
+This means it is up to us to return this memory when we are finished with it!
+
+Traditionally not doing so resulted in memory leaks.  This can still happen on many operating systems, but most modern ones have protections against this.
+
+Still... it is good practice to clean up after yourself.  You may not always know on what type of system your code will run.
+---
+**Memory Management**
+***
+
+We return the memory to the heap with the ```free()``` function.
+
+```C
+free(my_students);
+free(my_memory);
+```
+
+Always ```free``` any memory you allocate.
