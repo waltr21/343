@@ -50,7 +50,7 @@ Rubric:
 | Compilation | Compiles with no errors or warnings | Compiles but with warnings | Doesn't compile |
 | Style Guide | Perfectly adheres to style guide | Minor style guide mistakes | Fails to adhere to style guide |
 | Follows Project Specifications | No requirements omitted | 1 - 2 requirements omitted | More than 2 requirements omitted |
-
+| On time | Submitted before due date and time | Submitted up to 1 day late | Submitted more than 1 day late |
 
 ## Submission Process and Deadline
 
