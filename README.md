@@ -11,6 +11,18 @@ Schedule
 | 2 - 9/04 | Labor Day - No class | | | |
 | 2 - 9/06 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | http://www.learn-c.org/ | Explore and understand [this code](https://github.com/irawoodring/pointer_perils "Pointers in C")| |
 | 2 - 9/08 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | Follow tutorials | [C Exercises](./assignments/reverse-file-in-c.md "Project 1 in C") | |
+| 3 - 9/11 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | | | |
+
+
+
+
+
+
+
+
+
+
+
 | 3 - 9/11 | Architecture and Language History | Chapter 2 | C Project | C Exercises Due |
 | 3 - 9/13 | Syntax and Semantics | Chapter 3 | | |
 | 3 - 9/15 | Syntax and Semantics | | | |
@@ -21,8 +33,8 @@ Schedule
 | 5 - 9/27 | Lex and Yacc | | Lex and Yacc | |
 | 5 - 9/29 | Object Oriented Programming | | | |
 | 6 - 10/02 | Object Oriented Programming | | | |
-| 6 - 10/04 | Language Spotlight - Python | | | |
-| 6 - 10/06 | Language Spotlight - Python | | Python/Ruby Project | |
+| 6 - 10/04 | Language Spotlight - Python (Object Oriented)| | | |
+| 6 - 10/06 | Language Spotlight - Python (Object Oriented)| | Python/Ruby Project | |
 | 7 - 10/09 | Names, Bindings, Scope | | | |
 | 7 - 10/11 | Names, Bindings, Scope | | | |
 | 7 - 10/13 | Midterm exam | | | |
