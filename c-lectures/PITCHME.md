@@ -281,7 +281,9 @@ The return type of ```int``` means that a C program will return a numeric value.
 
 This allows us to automate program runs!
 ---?code=./c-lectures/samples/errno-base.h
+```errno-base.h```
 ---?code=./c-lectures/samples/errno.h
+```errno.h```
 ---
 **Program Layout**
 ***
