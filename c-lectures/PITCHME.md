@@ -280,18 +280,16 @@ The first ```int``` is the return type.  The ```int argc``` is a parameter to th
 The return type of ```int``` means that a C program will return a numeric value.  This value corresponds to an error code.  This allows us to tell the operating system if the program exited cleanly, or if it exited due to some error state.
 
 This allows us to automate program runs!
----
 ---?code=./c-lectures/samples/errno-base.h
 ---?code=./c-lectures/samples/errno.h
+---
 **Program Layout**
 ***
 
 The two parameters sent to the ```main``` function are an ```int``` telling the program how many command-line arguments were passed to the program, and a pointer to a pointer to a ```char```.  As we will see shortly, this is how C creates an array of strings.  These strings are the command-line arguments.
 
 **NOTE:** the first argument, argv[0] is the program name!
----
 ---?code=./c-lectures/samples/args.c
----
 **Program Layout**
 ***
 
