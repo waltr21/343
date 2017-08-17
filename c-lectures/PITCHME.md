@@ -292,6 +292,7 @@ The two parameters sent to the ```main``` function are an ```int``` telling the 
 
 **NOTE:** the first argument, argv[0] is the program name!
 ---?code=./c-lectures/samples/args.c
+---
 **Program Layout**
 ***
 
@@ -529,7 +530,7 @@ But... why do we need pointers?
 **Data Types - Pointers**
 ***
 
-C can only return a data types value.
+C can only return a data type's value.
 
 We are used to passing by reference in Java (for the most part).
 
@@ -616,15 +617,7 @@ But what if we need a data structure of changing size?
 **Memory Management**
 ***
 
-Why not just declare an array?
-
-```C
-int grades[100];
-```
-
-This is perfectly fine.  Except the array can never get bigger than 100.
-
-If we code this in such a manner the compiler will reserve enough space for 100 ```ints``` on the stack.  Because of the nature of the stack (new stack frames are stored on it, remember?) we can't increase the size of this space at run time.
+Can't go on the stack...
 ---
 **Memory Management**
 ***
@@ -684,9 +677,12 @@ student* my_students = (student*) malloc(50 * sizeof(student));
 The problem?  Because we aren't dealing with data on the stack we have to manage the memory ourselves.
 
 This means it is up to us to return this memory when we are finished with it!
+---
+**Memory Management**
+***
 
 Traditionally not doing so resulted in memory leaks.  This can still happen on many operating systems, but most modern ones have protections against this.
----
+
 Still... it is good practice to clean up after yourself.  You may not always know on what type of system your code will run.
 ---
 **Memory Management**
