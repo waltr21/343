@@ -64,5 +64,5 @@ a[5] = a[4] + 1;
 ```
 
 today.
----?image=./history-and-architecture/images/Konrad_Zuse_(1992).jpg&size=auto 90%
+---?image=./history-and-architecture/images/Konrad_Zuse_1992.jpg&size=auto 90%
 ---
