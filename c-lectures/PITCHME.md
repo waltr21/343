@@ -5,7 +5,7 @@ Ira Woodring
 
 ***
 
-The C Programming Language
+**The C Programming Language**
 ---
 **History**
 ***
@@ -32,9 +32,9 @@ Interest in portability came later.
 **History**
 ***
 
-- Popularized syntax we use still today, such as brackets for array accesses (which was uncommon at the time!)
+- Popularized syntax we use still today, such as brackets for array accesses (which was uncommon at the time!).
 
-- Introduced the operators ```++``` and ```--``` (invented by Ken Thompson!)
+- Introduced the operators ```++``` and ```--``` (invented by Ken Thompson, also at Bell Labs).
 ---
 **History**
 ***
@@ -57,7 +57,7 @@ Interest in portability came later.
 **History**
 ***
 
-- After it became portable the popularity soared.
+- After it became portable the popularity soared (mostly due to the popularity of Unix).
 
 - During the 80's compilers were written for nearly every architecture and OS.
 
@@ -215,7 +215,7 @@ It turns out that most systems pre-compile common libraries.  This gives us mult
 
 Which brings us to a very important point:
 
-The compiler doesn't actually create executable files.  It creates object files.  The **liner** links together the files into an executable.
+The compiler doesn't actually create executable files.  It creates object files.  The **linker** links together the files into an executable.
 ---
 **Compilation**
 ***
@@ -230,6 +230,9 @@ It turns out though, there are two types of linking:
 ***
 
 Static linking pulls in all of the code needed for a program to run.  This results in a larger executable, but guarantees that the program can run on the target system.
+---
+**Compilation**
+***
 
 Dynamic linking uses **method stubs** when linking to a system library.  These executables are not as portable.  The target system must provide the required libraries the stubs point to or the program can't run.  This is the default linking method.
 ---
@@ -239,6 +242,9 @@ Dynamic linking uses **method stubs** when linking to a system library.  These e
 **When should I use each method?**
 
 Most of the time you will just want to link dynamically.  This keeps the executable small and relies upon the system libraries.  Since system libraries are patched often to fix bugs/security holes, this is a good practice.
+---
+**Compilation**
+***
 
 If you happen to be coding and need very specific versions of a library for your code to work correctly, you may wish to compile statically.  This will pull in all of the code and libraries needed for the executable to run on the target system.
 ---
@@ -275,6 +281,8 @@ The return type of ```int``` means that a C program will return a numeric value.
 
 This allows us to automate program runs!
 ---
+---?code=./c-lectures/samples/errno-base.h
+---?code=./c-lectures/samples/errno.h
 **Program Layout**
 ***
 
