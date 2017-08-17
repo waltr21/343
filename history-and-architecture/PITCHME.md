@@ -15,4 +15,5 @@ Charles Babbage worked on his difference engine; a mechanical device used to cal
 
 Ada Lovelave is widely credited with writing the first computer "program"; an algorithm for Babbage's machine.
 ---
+
 ![The Difference Engine](./history-and-architecture/images/Babbage_Difference_Engine.jpg "The Difference Engine")
