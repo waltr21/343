@@ -584,6 +584,18 @@ Compile it, and step through it until you understand what is happening.
 
 Your first C assignment will be made VASTLY easier if you understand this code.
 ---
+**Data Types - Arrays**
+***
+
+Any data type can also be declared as an array:
+
+```C
+int my_int_array[100];
+student my_student_array[1000];
+```
+
+However!  This is static creation of the array (compile-time).  This means that the array is on the stack and cannot grow during the program's run-time.
+---
 **Memory Management**
 ***
 
@@ -666,7 +678,7 @@ The problem?  Because we aren't dealing with data on the stack we have to manage
 This means it is up to us to return this memory when we are finished with it!
 
 Traditionally not doing so resulted in memory leaks.  This can still happen on many operating systems, but most modern ones have protections against this.
-
+---
 Still... it is good practice to clean up after yourself.  You may not always know on what type of system your code will run.
 ---
 **Memory Management**
@@ -679,4 +691,6 @@ free(my_students);
 free(my_memory);
 ```
 
-Always ```free``` any memory you allocate.
+Seriously, always ```free``` any memory you allocate.
+---
+This is by no means a comprehensive tutorial of C.  It is quite a complex and powerful language.  This is enough for you to begin learning, and to complete many basic and intermediate C tasks.
