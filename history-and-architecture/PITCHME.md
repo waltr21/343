@@ -88,7 +88,7 @@ Coded mathematical expressions.
 | 02 | ) | 07 | + | 2n | (n+2)nd root |
 | 03 | = | 08 | pause | 4n | if <= n |
 | 04 | / | 09 | ( | 58 | print and tab |
-
+---
 Variables were byte-pair Codes
 
 ```X0 = SQRT(ABS(Y0))``` Becomes ```00 X0 03 20 06 Y0```
