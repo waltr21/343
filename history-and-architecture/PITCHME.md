@@ -66,3 +66,30 @@ a[5] = a[4] + 1;
 today.
 ---?image=./history-and-architecture/images/Konrad_Zuse_1992.jpg&size=auto 90%
 ---
+**Pseudocodes**
+
+Not pseudocode as we think of it today.
+
+Rather, was a group of languages from the 40s and 50s.
+---
+**Pseudocodes**
+
+**Short Code** - Developed for the BINAC computer then used on UNIVAC I (the first commercial computer in the U.S.).
+
+Memory had 72 bits grouped as 12 six-bit bytes.
+
+Coded mathematical expressions.
+---
+**Short Code Codes**
+
+| Byte code | Operation | Byte Code | Operation |Byte Code | Operation |
+|-----------|-----------|-----------|-----------|----------|-----------|
+| 01 | - | 06 | abs value | 1n | (n+2)nd power |
+| 02 | ) | 07 | + | 2n | (n+2)nd root |
+| 03 | = | 08 | pause | 4n | if <= n |
+| 04 | / | 09 | ( | 58 | print and tab |
+
+Variables were byte-pair Codes
+
+```X0 = SQRT(ABS(Y0))``` Becomes ```00 X0 03 20 06 Y0```
+---
