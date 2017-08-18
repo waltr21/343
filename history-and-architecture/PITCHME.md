@@ -18,6 +18,7 @@ Ada Lovelave is widely credited with writing the first computer "program"; an al
 ---?image=./history-and-architecture/images/Ada_Lovelace_portrait.jpg&size=auto 90%
 ---
 **Konrad Zuse's Plankalkül**
+***
 
 Pronounced "Tsoo-zuh".
 
@@ -26,12 +27,14 @@ He was a German scientist working on electromechanical relays.
 By 1945 most of his work had been destroyed by Allied bombing.
 ---
 **Konrad Zuse's Plankalkül**
+***
 
 Built a computer called the Z4.  He moved it to a Bavarian village and worked alone.
 
 Plankalkül means "Program Calculus".  He developed it for his Ph.D. dissertation.  It was completed in 1945 but not published until 1972.
 ---
 **Konrad Zuse's Plankalkül**
+***
 
 Simplest data type was the bit.
 
@@ -42,10 +45,12 @@ Included arrays and record types, included nested records!
 It had an iterative statement much like a ```for```.
 ---
 **Konrad Zuse's Plankalkül**
+***
 
 He even wrote 49 pages of algorithms to play chess, even though he was not a chess expert!
 ---
 **Konrad Zuse's Plankalkül**
+***
 
 Had (what we would consider) a weird syntax.
 
@@ -67,12 +72,14 @@ today.
 ---?image=./history-and-architecture/images/Konrad_Zuse_1992.jpg&size=auto 90%
 ---
 **Pseudocodes**
+***
 
 Not pseudocode as we think of it today.
 
 Rather, was a group of languages from the 40s and 50s.
 ---
 **Pseudocodes**
+***
 
 **Short Code** - Developed for the BINAC computer then used on UNIVAC I (the first commercial computer in the U.S.).
 
@@ -91,5 +98,51 @@ Coded mathematical expressions.
 ---
 Variables were byte-pair Codes
 
-```X0 = SQRT(ABS(Y0))``` Becomes ```00 X0 03 20 06 Y0```
+```X0 = SQRT(ABS(Y0))```
+
+Becomes
+
+```00 X0 03 20 06 Y0```
 ---
+**Pseudocodes**
+***
+
+**Speedcoding**
+
+Created by John Backus (we will hear more about him later this semester).
+
+Extended the IBM 701 machine to allow for floating-point calculations.  Added square root, sine, arc tangent, exponent, and logarithm statements as well as conditional and unconditional branches.
+---
+INCREDIBLY slow by today's standards.  Quicker than a human though.
+
+An add instruction took 4.2 milliseconds.
+
+Was interpreted; only 700 words of memory left for programs after the interpreter started running.
+---
+**Pseudocodes**
+***
+
+The UNIVAC "Compiling" System
+
+Led by Grace Hopper at UNIVAC.
+
+Expanded pseudocode into machine code.  Made programs MUCH shorter.
+---
+** Grace Hopper**
+***
+
+A hero of Computer Science.  Also a U.S. Navy Rear Admiral.
+
+Was a pioneer of compilers and machine-independent programming languages.  Prior to this time different languages were written for every machine.
+
+She believed that programmers should be able to use English words that a compiler would translate into machine code.
+---
+** Grace Hopper**
+***
+
+Often called "Amazing Grace".
+
+Has a destroy named after her, as well as a supercomputer.
+
+Received 40 honorary degrees from universities around the world, as well as the National Medal of Technology and the Presidential Medal of Freedom.
+---?image=./history-and-architecture/images/Grace_Hopper.jpg&size=auto 90%
