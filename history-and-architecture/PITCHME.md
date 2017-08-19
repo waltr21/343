@@ -148,6 +148,7 @@ Has a navy missile destroy named after her, as well as a supercomputer.
 
 Received 40 honorary degrees from universities around the world, as well as the National Medal of Technology and the Presidential Medal of Freedom.
 ---?image=./history-and-architecture/images/Grace_Hopper.jpg&size=auto 90%
+---
 **Fortran and the IBM 704**
 ***
 
@@ -212,3 +213,149 @@ close(10)
 end
 ```
 Sample Fortran 90/95 code from https://en.wikibooks.org/wiki/Fortran/Fortran_examples#Summations_with_a_DO_loop
+---
+**LISP**
+***
+
+Was the first functional programming language.
+
+Function here refers to the concept of a mathematical function, not a "subroutine" or process abstraction.
+
+Stands for **LIS**t **P**rocessor.
+---
+**LISP**
+***
+
+Written for artificial intelligence.  Many people were interested in natural language processing and modeling the human brain.
+
+Was preceded by a great deal of work at RAND, IBM, and other research houses.
+---
+**LISP**
+***
+
+Only has two data structures - atoms and lists.
+
+Atoms are either symbols (identifiers) or numbers.
+
+For instance:
+
+```LISP
+(A B C D)               // A list of 4 atoms
+(A (B C) D (E (F G)))   // A list of 4 elements (some being lists!)
+```
+---
+**LISP**
+***
+
+As a functional programming language, all computation is accomplished by applying functions to arguments (which may be other functions).
+
+Does not have assignment statements.
+
+Makes heavy use of recursion; loops are unneeded.
+---
+**LISP**
+***
+
+Completely dominated artificial intelligence for over a quarter of a century.
+
+Code can be compiled (now).
+
+Today, functional languages are taking off (for good reason!).
+---
+```LISP
+;  LISP Example function
+;  The following code defines a LISP predicate function
+;  that  takes two lists as arguments and returns True
+;  if the two lists are equal, and NIL (false) otherwise
+   (DEFUN equal_lists (lis1 lis2)
+    (COND
+      ((ATOM lis1) (EQ lis1 lis2))
+      ((ATOM lis2) NIL)
+      ((equal_lists (CAR lis1) (CAR lis2))
+(T NIL) )
+)
+```
+
+LISP sample code from our textbook.
+---
+**LISP**
+***
+
+Today programmers use either Scheme or Common LIPS (clisp).
+
+Many other functional languages are being used today such as Clojure and Haskell.
+---
+**ALGOL**
+***
+
+One of the single most important languages ever created.  Many programmers have never heard of it.
+
+Was created to be a universal programming language for science.
+
+Generalized many of Fortran's features, but also added new features and constructs.
+---
+**ALGOL**
+***
+
+Formalized the idea of the data type.
+
+Syntax is still commonly used in academic literature when defining algorithms.  
+
+You may have noticed it before without knowing, if you saw an algorithm that included assignment statements as such:
+---
+```ALGOL
+y := 0;
+```
+
+Instead of the near ubiquitous
+
+```C
+y = 0;
+```
+---
+```ALGOL
+procedure Absmax(a) Size:(n, m) Result:(y) Subscripts:(i, k);
+    value n, m; array a; integer n, m, i, k; real y;
+comment The absolute greatest element of the matrix a, of size n by m,
+    is transferred to y, and the subscripts of this element to i and k;
+begin
+    integer p, q;
+    y := 0; i := k := 1;
+    for p := 1 step 1 until n do
+        for q := 1 step 1 until m do
+            if abs(a[p, q]) > y then
+                begin y := abs(a[p, q]);
+                    i := p; k := q
+                end
+end Absmax
+```
+From https://en.wikipedia.org/wiki/ALGOL_60
+---
+**ALGOL**
+
+Over the years different versions of ALGOL added many interesting new features.
+
+- it was the first imperative language to allow recursion
+
+- it allowed passing parameters to subprograms by value or by named
+
+- in introduced block structure (scoping rules)
+---
+**ALGOL**
+***
+
+It never achieved widespread use in the U.S.
+
+However, many concepts it introduced are still seen in programming languages today.
+---
+**COBOL**
+***
+
+According to our text COBOL has been used more than any other language, but oddly never affected the programming world the way ALGOL did.
+
+So in some ways, they are very opposite of one another.
+---
+**COBOL**
+***
+
+**Co**mmon **B**usiness **O**riented **L**anguage
