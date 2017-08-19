@@ -402,3 +402,66 @@ STOP RUN.
 ```
 From http://www.csis.ul.ie/cobol/examples/Accept/Multiplier.htm
 (A longer example is in your text).
+---
+**BASIC**
+
+**B**eginners **A**ll **P**urpose **I**nstruction **C**ode
+
+Created at Dartmouth.  Technical students were able to use Fortran and Algol but the rest of the liberal arts student body had trouble.
+
+They wanted the language to be usable on terminals for time-sharing.
+---
+**BASIC**
+***
+
+The language needed to
+
+- be easy for non-tech students to use and learn-c
+
+- be pleasant and friendly
+
+- provide fast turnaround for homework
+
+- allow free and private access
+
+- consider user time more important than computer time
+---
+**BASIC**
+***
+
+Was the first widely used language that was used remotely.
+
+Widely criticized for poor program structure.
+
+Newer versions (such as VB.NET) allow full object-oriented programming.
+---
+```BASIC
+REM  BASIC Example Program
+REM  Input:  An integer, listlen, where listlen is less
+REM          than 100, followed by listlen-integer values
+REM  Output: The number of input values that are greater
+REM          than the average of all input values
+  DIM intlist(99)
+  result = 0
+  sum = 0
+  INPUT listlen
+  IF listlen > 0 AND listlen < 100 THEN
+REM  Read input into an array and compute the sum
+    FOR counter = 1 TO listlen
+      INPUT intlist(counter)
+      sum = sum + intlist(counter)
+    NEXT counter
+REM  Compute the average
+    average = sum / listlen
+REM  Count the number of input values that are > average
+    FOR counter = 1 TO listlen
+      IF intlist(counter) > average
+        THEN result = result + 1
+    NEXT counter
+REM  Print the result
+    PRINT "The number of values that are > average is:";
+           result
+  ELSE
+    PRINT "Error—input list length is not legal"
+END IF END
+```
