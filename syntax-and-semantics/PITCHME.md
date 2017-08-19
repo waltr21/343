@@ -304,5 +304,4 @@ A = B + C * A
 ```
 ---
 ## There is more than one possibility!
----?image=./syntax-and-semantics/images/ambigious-parse-tree.png?size=auto
----
+---?image=./syntax-and-semantics/images/ambigious-parse-tree.png&size=auto
