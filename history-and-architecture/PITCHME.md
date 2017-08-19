@@ -6,6 +6,7 @@ Ira Woodring
 ***
 
 **Architecture and History**
+(Sebesta Text)
 ---
 The history of computing goes back much farther than the actual times during which computers existed.
 
@@ -465,3 +466,5 @@ REM  Print the result
     PRINT "Error—input list length is not legal"
 END IF END
 ```
+From our textbook.
+---

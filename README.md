@@ -18,7 +18,7 @@ Schedule
 | 3 - 9/15 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | | | |
 | 4 - 9/18 | [Syntax and Semantics](https://gitpitch.com/irawoodring/343/master?p=syntax-and-semantics "Syntax and Semantics Lecture") | Chapter 3 | | |
 | 4 - 9/20 | [Syntax and Semantics](https://gitpitch.com/irawoodring/343/master?p=syntax-and-semantics "Syntax and Semantics Lecture") | | | C Exercises Due (Blackboard)|
-| 4 - 9/22 | Lexical and Syntax Analysis | ? | | |
+| 4 - 9/22 | Lexical and Syntax Analysis | | | |
 | 5 - 9/25 | Lexical and Syntax Analysis | | | |
 | 5 - 9/27 | Regular Expressions | | RegEx Assignment | |
 | 5 - 9/29 | Lex and Yacc | | | |
