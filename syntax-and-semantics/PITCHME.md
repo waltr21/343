@@ -116,6 +116,10 @@ It uses abstractions for syntactic structures.  For instance, an assignment stat
 ```
 <assign> -> <var> = <expression>
 ```
+---
+### Syntax
+***
+
 What this describes (or really defines) for us is an rule for a valid sentence in a language.  Here we are saying that an assignment statement is defined as a variable followed by an equals sign followed by an expression.
 ---
 ### Syntax
