@@ -116,8 +116,8 @@ It uses abstractions for syntactic structures.  For instance, an assignment stat
 ```
 <assign> -> <var> = <expression>
 ```
-What this describes (or really defines) for us is an idea for a valid sentence in a language.  Here we are saying that an assignment statement is defined as a variable followed by an equals sign followed by an expression.
-```
+What this describes (or really defines) for us is an rule for a valid sentence in a language.  Here we are saying that an assignment statement is defined as a variable followed by an equals sign followed by an expression.
+---
 ### Syntax
 ***
 
@@ -126,3 +126,34 @@ If we look closely at the statement again, we should make note of a few things:
 ```
 <assign> -> <var> = <expression>
 ```
+
+Every item we see in this sentence is a token of some sort.  Some are called nonterminal symbols and some are terminal symbols.
+---
+### Syntax
+***
+
+**Nonterminals** - abstractions.  These may be broken down further to other tokens until they can be nothing more than some lexeme.  May have two or more distinct definitions representing possible syntactic forms in the language.
+
+**Terminals** - lexemes.  These cannot be broken down any further.
+
+**Grammars** - are the collections of rules for languages.
+---
+### Syntax
+***
+
+When writing a grammar we may use the "|" symbol to separate multiple definitions of a nonterminal:
+
+```
+<if_stmt> -> if ( <logic_expr> ) <stmt>
+<if_stmt> -> if ( <logic_expr> ) <stmt> else <stmt>
+```
+
+Or:
+
+```
+<if_stmt> -> if ( <logic_expr> ) <stmt>
+        | -> if ( <logic_expr> ) <stmt> else <stmt>
+```
+---
+### Syntax
+***
