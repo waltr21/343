@@ -1,6 +1,8 @@
 # 343 - Structure of Programming Languages
 CIS 343 Notes and code samples.
 
+Most content from the Sebesta Programming Languages book, used in class.
+
 Schedule
 
 | Week/Date | Topic | Reading | Assignment | Notes |
@@ -14,7 +16,7 @@ Schedule
 | 3 - 9/11 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | http://www.learn-c.org/ | Explore and understand [this code](https://github.com/irawoodring/pointer_perils "Pointers in C")| |
 | 3 - 9/13 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | Follow tutorials | [C Project](./assignments/reverse-file-in-c.md "Project 1 in C") | |
 | 3 - 9/15 | [Language Spotlight - C (Imperative Procedural)](https://gitpitch.com/irawoodring/343/master?p=c-lectures "C Lecture") | | | |
-| 4 - 9/18 | Syntax and Semantics | Chapter 3 | | |
+| 4 - 9/18 | [Syntax and Semantics](https://gitpitch.com/irawoodring/343/master?p=history-and-architecture "Syntax and Semantics Lecture") | Chapter 3 | | |
 | 4 - 9/20 | Syntax and Semantics | | | C Exercises Due (Blackboard)|
 | 4 - 9/22 | Lexical and Syntax Analysis | | | |
 | 5 - 9/25 | Lexical and Syntax Analysis | | | |
