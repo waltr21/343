@@ -279,3 +279,29 @@ A = B * ( A + C)
 
 can be represented with the tree:
 ---?image=./syntax-and-semantics/images/parse_tree-1.png&size=auto
+---
+**Syntax**
+***
+
+We must be VERY careful when designing a grammar.  Consider this grammar:
+
+```
+<assign> -> <id> = <expr>
+<id> -> A | B | C
+<expr> -> <expr> + <expr>
+        | <expr> * <expr>
+        | ( <expr> )
+        | <id>
+```
+---
+**Syntax**
+***
+
+Now, create a parse tree for this sentence:
+
+```
+A = B + C * A
+```
+---
+## There is more than one possibility!
+---?image=./syntax-and-semantics/images/ambigious-parse-tree.png?size=auto
