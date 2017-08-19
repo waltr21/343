@@ -305,3 +305,114 @@ A = B + C * A
 ---
 ## There is more than one possibility!
 ---?image=./syntax-and-semantics/images/ambigious-parse-tree.png&size=auto
+---
+**Syntax**
+***
+
+This grammar is ambiguous.  Any grammar that has a sentential form for which there are two or more possible parse trees as ambiguous.
+
+We don't want ambiguity in a grammar.
+---
+**Syntax**
+***
+
+What do we do if we have an ambiguous grammar?
+
+- Provide some other nongrammatical information for the parser
+
+- Rewrite the grammar
+---
+**Syntax**
+***
+
+Operator Precedence is one way of providing nongrammatical information.
+
+We assign different levels of importance to a token so that it is evaluated first if it is found at the same level as another token.
+
+With the previous grammar, if our parser knew the rules of mathematics (which are NOT grammar rules), and could apply those we wouldn't have a problem.
+---
+**Syntax**
+***
+
+Note that in our first grammar:
+
+```
+<assign> -> <id> = <expr>
+<id> -> A|B|C
+<expr> -> <id> + <expr>
+        | <id> * <expr>
+        | ( <expr> )
+        | <id>
+```
+
+We still need operator precedence.  This one is unambiguous but does not follow math rules:
+---
+**Syntax**
+***
+
+```
+A + B * C       // Parse tree will evaluate A + B first
+```
+
+May not be mathematically correct.
+
+```
+A * B + C       // Parse tree hierarchy correct here
+```
+
+Could be.
+**Syntax**
+***
+
+We could rewrite the original grammar as well.
+
+We could add some rules and new nonterminals:
+
+  - Use new nonterminals for ```+``` and ```*```, not just ```<expr>```
+
+    - <expr> generates only ```+``` with <term> on the right side
+
+    - <term> generates only ```*``` with <factor> on the right side
+
+    - <factor> yields <expr> or <id>
+---
+**Syntax**
+***
+
+This grammar will produce the same language, but without ambiguity:
+
+```
+<assign> -> <id> = <expr>
+<id> -> A | B | C
+<expr> -> <expr> + <term>
+        | <term>
+<term> -> <term> * <factor>
+        | <factor>
+<factor> -> ( <expr> )
+        | <id>
+```
+---
+**Syntax**
+***
+
+Now generate
+
+```
+A = B + C * A
+```
+---
+```
+<assign> => <id> = <expr>
+         =>A = <expr>
+         =>A = <expr> + <term>
+         =>A = <term> + <term>
+         =>A = <factor> + <term>
+         =>A = <id> + <term>
+         =>A = B + <term>
+         =>A = B + <term> * <factor>
+         => A = B + <factor> * <factor>
+         =>A = B + <id> * <factor>
+         =>A = B + C * <factor>
+         =>A = B + C * <id>
+         =>A = B + C * A
+```
