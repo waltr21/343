@@ -111,7 +111,7 @@ This notation was very similar to Chomsky's ideas.
 
 BNF is a **metalanguage** - a language used to describe languages.
 
-It uses abstractions for syntactic structures.  For instance, an assignment statement definition may be give as:
+It uses abstractions for syntactic structures.  For instance, an assignment statement definition may be given as:
 
 ```
 <assign> -> <var> = <expression>
@@ -120,7 +120,9 @@ It uses abstractions for syntactic structures.  For instance, an assignment stat
 ### Syntax
 ***
 
-What this describes (or really defines) for us is an rule for a valid sentence in a language.  Here we are saying that an assignment statement is defined as a variable followed by an equals sign followed by an expression.
+What this describes (or really defines) for us is a rule for a valid sentence in a language.
+
+Here we are saying that an assignment statement is defined as a variable followed by an equals sign followed by an expression.
 ---
 ### Syntax
 ***
@@ -161,3 +163,68 @@ Or:
 ---
 ### Syntax
 ***
+
+Lists are described in BNF recursively, i.e.:
+
+```
+<identifier_list> -> identifier
+                  -> identifier, <identifier_list>
+```
+---
+### Syntax
+***
+
+So we now have the ability to generate a language (a grammar is a language generator).
+
+We begin with a start symbol and begin applying a sequence of rules.  This is called creating a derivation.
+
+For instance:
+---
+```
+<program> -> begin <stmt_list> end
+<stmt_list> -> <stmt>
+            |  <stmt> ; <stmt_list>
+<stmt> -> <var> = <expression>
+<var> -> A | B | C
+<expression> -> <var> + <var>
+             |  <var> - <var>
+             |  <var>
+```
+---
+### Syntax
+***
+
+This grammar describes VERY simple programs.  These programs must begin with the keyword ```begin``` (a terminal symbol) and end with ```end``` (another terminal).
+
+Allows for only assignment statements, possibly followed by a semicolon and another assignment.
+
+Only three variable names are allowed, ```A```, ```B```, or ```C```.
+---
+### Syntax
+***
+
+Any sentence we can derive using these rules is a valid sentence in this language.
+
+For instance, is
+
+```
+begin A = B + C ; B = C end
+```
+
+valid?
+---
+```
+<program> => begin <stmt_list> end
+          => begin <stmt> ; <stmt_list> end
+          => begin <var> = <expression> ; <stmt_list> end
+          => begin A = <expression> ; <stmt_list> end
+          => begin A = <var> + <var> ; <stmt_list> end
+          => begin A = B + <var> ; <stmt_list> end
+          => begin A = B + C ; <stmt_list> end
+          => begin A = B + C ; <stmt> end
+          => begin A = B + C ; <var> = <expression> end
+          => begin A = B + C ; B = <expression>end
+          => begin A = B + C ; B = <var>end
+          => begin A = B + C ; B = C end
+```
+Yes!
