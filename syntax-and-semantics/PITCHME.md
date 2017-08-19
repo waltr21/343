@@ -223,8 +223,46 @@ valid?
           => begin A = B + C ; <stmt_list> end
           => begin A = B + C ; <stmt> end
           => begin A = B + C ; <var> = <expression> end
-          => begin A = B + C ; B = <expression>end
-          => begin A = B + C ; B = <var>end
+          => begin A = B + C ; B = <expression> end
+          => begin A = B + C ; B = <var> end
           => begin A = B + C ; B = C end
 ```
 Yes!
+---
+### Syntax
+***
+
+Each line in the derivation is called a sentential form.
+
+Here we performed leftmost derivations; we only replaced the nonterminal at the furthest left point in the sentence each time.
+
+There are other ways!
+---
+**Practice time!**
+***
+
+Using this grammar:
+
+```
+<assign> -> <id> = <expr>
+<id> -> A|B|C
+<expr> -> <id> + <expr>
+        | <id> * <expr>
+        | ( <expr> )
+        | <id>
+```
+
+Derive ```A = B * ( A + C )```
+---
+```
+<assign> => <id> = <expr>
+         => A = <expr>
+         => A = <id> * <expr>
+         => A = B * <expr>
+         => A = B * ( <expr> )
+         => A = B * ( <id> + <expr> )
+         => A = B * ( A + <expr> )
+         => A = B * ( A + <id> )
+         => A = B * ( A + C )
+```
+---
