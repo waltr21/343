@@ -359,3 +359,46 @@ So in some ways, they are very opposite of one another.
 ***
 
 **Co**mmon **B**usiness **O**riented **L**anguage
+
+Came out of a meeting sponsored by the Department of Defense on designing a common language for business applications.
+---
+**COBOL**
+***
+
+Wanted to use English statements as much as possible, be easy to use (even if that meant it was less powerful), and should be designed in a way to remove as much implementation restrictions as possible.
+---
+**COBOL**
+***
+
+Provided the first implementation of "record" types (though Plankalkül had them).
+
+Very good language for working with data.  Process abstraction not as good.
+
+Was the first programming language mandated for use by the Department of Defense, even though early compilers had poor performance.
+---
+```COBOL
+$ SET SOURCEFORMAT"FREE"
+IDENTIFICATION DIVISION.
+PROGRAM-ID.  Multiplier.
+AUTHOR.  Michael Coughlan.
+* Example program using ACCEPT, DISPLAY and MULTIPLY to
+* get two single digit numbers from the user and multiply them together
+
+DATA DIVISION.
+
+WORKING-STORAGE SECTION.
+01  Num1                                PIC 9  VALUE ZEROS.
+01  Num2                                PIC 9  VALUE ZEROS.
+01  Result                              PIC 99 VALUE ZEROS.
+
+PROCEDURE DIVISION.
+DISPLAY "Enter first number  (1 digit) : " WITH NO ADVANCING.
+ACCEPT Num1.
+DISPLAY "Enter second number (1 digit) : " WITH NO ADVANCING.
+ACCEPT Num2.
+MULTIPLY Num1 BY Num2 GIVING Result.
+DISPLAY "Result is = ", Result.
+STOP RUN.
+```
+From http://www.csis.ul.ie/cobol/examples/Accept/Multiplier.htm
+(A longer example is in your text).
