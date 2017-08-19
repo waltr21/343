@@ -271,11 +271,11 @@ Derive ```A = B * ( A + C )```
 
 Grammars do a great job of describing the hierarchy of the syntax.  We can represent this hierarchy visually with parse trees.
 
-The previous statment
+The previous statement
 
 ```
 A = B * ( A + C)
 ```
 
 can be represented with the tree:
----?image=./syntax-and-semantics/images/parse_tree-1.png
+---?image=./syntax-and-semantics/images/parse_tree-1.png&size=auto
