@@ -417,7 +417,7 @@ They wanted the language to be usable on terminals for time-sharing.
 
 The language needed to
 
-- be easy for non-tech students to use and learn-c
+- be easy for non-tech students to use and learn
 
 - be pleasant and friendly
 
@@ -480,10 +480,58 @@ IBM wanted to have a general purpose "language for everyone".
 **PL/I**
 ***
 
-Included best of ALGOL 60 - recursion, block structure, Fortran IV - separate compilation, global data, and COBOL 60 - data structures, I/O, and report generation, and new constructs.  In addition,
+Included best of ALGOL 60 - recursion, block structure, Fortran IV - separate compilation, global data, and COBOL 60 - data structures, I/O, and report generation, and new constructs.
+---
+**PL/I**
+***
+
+In addition,
 
   - Had the ability to have concurrently executing Subprograms
   - Could detect and gracefully handle 23 types of exceptions
   - Pointers
   - Referencing of cross-sections of arrays (for instance the third row of a multi-dimensional array could be referenced as if it was a single-dimensional array)
 ---
+**PL/I**
+***
+
+Was a little over ambitious.  Included too many features to be useful for programmers.
+
+Also had many poorly designed constructs (although it was the first for some which should be considered).
+
+Was used somewhat in the 70s then sort of died.
+---
+```PL/I
+/* PL/I PROGRAM EXAMPLE
+        INPUT:  AN INTEGER, LISTLEN, WHERE LISTLEN IS LESS THAN
+                100, FOLLOWED BY LISTLEN-INTEGER VALUES
+        OUTPUT: THE NUMBER OF INPUT VALUES THAT ARE GREATER THAN
+                THE AVERAGE OF ALL INPUT VALUES   */
+       PLIEX: PROCEDURE OPTIONS (MAIN);
+         DECLARE INTLIST (1:99) FIXED.
+         DECLARE (LISTLEN, COUNTER, SUM, AVERAGE, RESULT) FIXED;
+         SUM = 0;
+         RESULT = 0;
+         GET LIST (LISTLEN);
+        IF (LISTLEN > 0) & (LISTLEN < 100) THEN
+        DO;
+        /* READ INPUT DATA INTO AN ARRAY AND COMPUTE THE SUM */
+            DO COUNTER = 1 TO LISTLEN;
+              GET LIST (INTLIST (COUNTER));
+              SUM = SUM + INTLIST (COUNTER);
+            END;
+        /* COMPUTE THE AVERAGE */
+            AVERAGE = SUM / LISTLEN;
+        /* COUNT THE NUMBER OF VALUES THAT ARE > AVERAGE */
+            DO COUNTER = 1 TO LISTLEN;
+              IF INTLIST (COUNTER) > AVERAGE THEN
+                RESULT = RESULT + 1;
+            END;
+        /* PRINT RESULT */
+            PUT SKIP LIST ('THE NUMBER OF VALUES > AVERAGE IS:');
+            PUT LIST (RESULT);
+            END;
+          ELSE
+            PUT SKIP LIST ('ERROR—INPUT LIST LENGTH IS ILLEGAL');
+END PLIEX;
+```
