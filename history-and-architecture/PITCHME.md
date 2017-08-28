@@ -468,3 +468,22 @@ END IF END
 ```
 From our textbook.
 ---
+**PL/I**
+***
+
+Was another IBM invention.
+
+By the early 60s languages were written either for science or business.
+
+IBM wanted to have a general purpose "language for everyone".
+---
+**PL/I**
+***
+
+Included best of ALGOL 60 - recursion, block structure, Fortran IV - separate compilation, global data, and COBOL 60 - data structures, I/O, and report generation, and new constructs.  In addition,
+
+  - Had the ability to have concurrently executing Subprograms
+  - Could detect and gracefully handle 23 types of exceptions
+  - Pointers
+  - Referencing of cross-sections of arrays (for instance the third row of a multi-dimensional array could be referenced as if it was a single-dimensional array)
+---
