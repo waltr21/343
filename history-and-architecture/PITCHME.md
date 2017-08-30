@@ -503,35 +503,116 @@ Was used somewhat in the 70s then sort of died.
 ---
 ```PL/I
 /* PL/I PROGRAM EXAMPLE
-        INPUT:  AN INTEGER, LISTLEN, WHERE LISTLEN IS LESS THAN
-                100, FOLLOWED BY LISTLEN-INTEGER VALUES
-        OUTPUT: THE NUMBER OF INPUT VALUES THAT ARE GREATER THAN
-                THE AVERAGE OF ALL INPUT VALUES   */
-       PLIEX: PROCEDURE OPTIONS (MAIN);
-         DECLARE INTLIST (1:99) FIXED.
-         DECLARE (LISTLEN, COUNTER, SUM, AVERAGE, RESULT) FIXED;
-         SUM = 0;
-         RESULT = 0;
-         GET LIST (LISTLEN);
-        IF (LISTLEN > 0) & (LISTLEN < 100) THEN
-        DO;
-        /* READ INPUT DATA INTO AN ARRAY AND COMPUTE THE SUM */
-            DO COUNTER = 1 TO LISTLEN;
-              GET LIST (INTLIST (COUNTER));
-              SUM = SUM + INTLIST (COUNTER);
-            END;
-        /* COMPUTE THE AVERAGE */
-            AVERAGE = SUM / LISTLEN;
-        /* COUNT THE NUMBER OF VALUES THAT ARE > AVERAGE */
-            DO COUNTER = 1 TO LISTLEN;
-              IF INTLIST (COUNTER) > AVERAGE THEN
-                RESULT = RESULT + 1;
-            END;
-        /* PRINT RESULT */
-            PUT SKIP LIST ('THE NUMBER OF VALUES > AVERAGE IS:');
-            PUT LIST (RESULT);
-            END;
-          ELSE
-            PUT SKIP LIST ('ERROR—INPUT LIST LENGTH IS ILLEGAL');
+INPUT:  AN INTEGER, LISTLEN, WHERE LISTLEN IS LESS THAN
+        100, FOLLOWED BY LISTLEN-INTEGER VALUES
+OUTPUT: THE NUMBER OF INPUT VALUES THAT ARE GREATER THAN
+        THE AVERAGE OF ALL INPUT VALUES   */
+PLIEX: PROCEDURE OPTIONS (MAIN);
+ DECLARE INTLIST (1:99) FIXED.
+ DECLARE (LISTLEN, COUNTER, SUM, AVERAGE, RESULT) FIXED;
+ SUM = 0;
+ RESULT = 0;
+ GET LIST (LISTLEN);
+IF (LISTLEN > 0) & (LISTLEN < 100) THEN
+DO;
+/* READ INPUT DATA INTO AN ARRAY AND COMPUTE THE SUM */
+    DO COUNTER = 1 TO LISTLEN;
+      GET LIST (INTLIST (COUNTER));
+      SUM = SUM + INTLIST (COUNTER);
+    END;
+/* COMPUTE THE AVERAGE */
+    AVERAGE = SUM / LISTLEN;
+/* COUNT THE NUMBER OF VALUES THAT ARE > AVERAGE */
+    DO COUNTER = 1 TO LISTLEN;
+      IF INTLIST (COUNTER) > AVERAGE THEN
+        RESULT = RESULT + 1;
+    END;
+/* PRINT RESULT */
+    PUT SKIP LIST ('THE NUMBER OF VALUES > AVERAGE IS:');
+    PUT LIST (RESULT);
+    END;
+  ELSE
+    PUT SKIP LIST ('ERROR—INPUT LIST LENGTH IS ILLEGAL');
 END PLIEX;
 ```
+---
+**Early Dynamic Languages**
+***
+
+These languages weren't that popular, but they provided dynamic typing and storage allocation.  Meaning?
+
+- Variables were given a type when assigned a value
+- Storage was only allocated when a value was assigned
+---
+**Early Dynamic Languages**
+***
+
+**APL** also from IBM.  Not originally made to be a programming language; instead was meant to describe computer architecture.
+
+Had a large number of symbols that required an odd character set.  Made some things easy; a single operator could do a matrix transpose.  But was hard to read.
+---
+https://en.wikipedia.org/wiki/APL_syntax_and_symbols
+---
+**Early Dynamic Languages**
+***
+
+Still used, though not widely.  Oddly enough it hasn't changed much in its 50 years.
+---
+**Early Dynamic Languages**
+***
+
+**SNOBOL** was a Bell Labs invention.  Made for text processing.  Still around though not widely used.
+---
+**SIMULA 67**
+***
+
+Written in Norway at the Norwegian Computing Center between '62 and '64.  Was written for system simulation but quickly grew to be general purpose.
+
+Was the first language to provide data abstraction.  Used the class construct.  Provided the foundation of OO programming.
+---
+**ALGOL 68 and ALGOL Descendants**
+***
+
+ALGOL 68 stressed orthogonality.
+
+Pascal, designed for teaching programming, stressed simplicity and expressivity.
+
+C stressed flexibility and became the *lingua franca* of Computer Science.
+---
+**Prolog**
+***
+
+In the early '70s Prolog was created to allow programmers to program via formal logic.
+
+Is nonprocedural; programs don't provide steps for completing a task.  Instead, they provide the form and characteristics of the desired result.
+---
+**Prolog**
+***
+
+For instance, the programmer provides facts or rules:
+
+```Prolog
+mother(joanne, jake).
+father(vern, joanne).
+```
+---
+**Prolog**
+***
+
+And rules:
+
+```Prolog
+grandparent(X, Z) :- parent(X, Y), parent(Y, Z).
+```
+---
+**Prolog**
+***
+
+Then the system may be queried with a goal statement:
+
+```Prolog
+father(bob, darcie).
+```
+
+This statement asks the system to determine if bob is the father of darcie.  The system will respond with ```true``` if it can prove this, or ```false``` otherwise.
+---

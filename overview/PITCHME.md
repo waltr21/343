@@ -85,7 +85,7 @@ All of these were from http://bigthink.com/harpys-review/the-top-10-relationship
 ---
 On a similar note, the Sami people of Scandinavia and Russia have over 180 words for snow.
 
-They have so many different ways to express snow, each with subtle nuances so that the perfectly express ideas!
+They have so many different ways to express snow, each with subtle nuances so that they can perfectly express ideas!
 
 Let's consider a computer example:
 ---
@@ -114,6 +114,8 @@ Why was it so much more complicated in the first example??
 Assembly language lacks the concept of looping!
 
 Looping is a higher-order idea.
+
+Higher-order languages allow us to express these ideas more easily and succinctly.
 ---
 Second Reason
 ***
@@ -132,6 +134,10 @@ Code is a nightmare!
 Relies on hard coding some values sent, such as headers.  This can cause problems as things change.
 
 C doesn't natively understand the web.  You will need to re-invent the wheel continuously to get anything done - even then your code is not likely to be safe.
+Note:
+Show a PHP example from W3C Schools.
+
+https://www.w3schools.com/php/php_forms.asp
 ---
 So, we *can* use any language we want, but it doesn't mean we should.  By using C we can't take advantage of well-written, robust methods that other languages may provide for web programming.
 ---
