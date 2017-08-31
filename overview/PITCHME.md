@@ -20,6 +20,8 @@ Languages give us the ability to express what we are thinking.
 It can be hard to convey something we don't have a direct translation for.
 
 Using English for instance, how do you describe:
+Note:
+Don't forget the slides go DOWN on the next few definitions!
 ---
 The wordless yet meaningful look shared by two people who desire to initiate something, but are both reluctant to start.
 +++
@@ -98,7 +100,7 @@ jg end                    // If they are the same, go to end.
 inc eax                   // Increase the value in eax
 jmp beginning             // Go to the beginning
 end:
-mov $x, eax               // Move the value in eax to
+mov $x, eax               // Move the value in eax to $x
 ```
 ---
 It is the same as this!
