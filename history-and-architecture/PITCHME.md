@@ -614,5 +614,17 @@ Then the system may be queried with a goal statement:
 father(bob, darcie).
 ```
 
-This statement asks the system to determine if bob is the father of darcie.  The system will respond with ```true``` if it can prove this, or ```false``` otherwise.
+This statement asks the system to determine if ```bob``` is the father of ```darcie```.  The system will respond with ```true``` if it can prove this, or ```false``` otherwise.
 ---
+**Prolog**
+***
+
+At one time, some computer scientists thought logic programming would overtake other forms of programming as the dominant paradigm.  This never happened, likely because
+
+  - logic programs are often highly inefficient compared to other programs.
+  - we have determined it is not an effective paradigm for certain domains (primarily A.I. and databases are the best for it).
+---
+**Ada**
+***
+
+Developed for the Department of Defense.  

@@ -170,6 +170,10 @@ int main(int argc, char** argv)
    }
 }
 ```
+Note:
+Make note of the include statements, as well as the pointers, and namespace "::" characters.
+
+Notice how such a simple task is complicated in C++ because C++ has different concerns than Python.
 ---
 Python seems to be more English-like, while C++ includes some constructs that may be confusing (What is "::" for instance?).
 
@@ -178,6 +182,8 @@ C++ has a focus on speed and low-level hardware control.
 Python is a more general-purpose language for the masses.
 
 So what domains are there?
+Note:
+Go down here!  Slides are below, not to the right!
 +++
 Science
 

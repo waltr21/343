@@ -37,6 +37,10 @@ Refers to how easily the language can be read and understood.  For instance, her
 ---?code=code_samples/HIRES.S
 https://raw.githubusercontent.com/jmechner/Prince-of-Persia-Apple-II/master/01%20POP%20Source/Source/HIRES.S
 ---
+In case you're interested, here is the original game play on the Apple II:
+
+https://www.youtube.com/watch?v=T5-06QnCHKY
+---
 Readability
 ***
 
@@ -46,6 +50,13 @@ However, having higher-level constructs alone does not necessarily make a langua
 ---?code=code_samples/prog.c
 Or, this one:
 ---?code=code_samples/prog2.c
+Let's compile it and see what happens!
+Note:
+Compiles fine on OSX with no libraries needed.  Does have warnings, but no errors.
+---
+Both of these are from the International Obfuscated Code Contest.
+
+http://www.ioccc.org/years.html#2015
 ---
 Readability
 ***
@@ -73,6 +84,14 @@ Readability - Simplicity
 **Having a small number of basic constructs**
 
 How many keywords and operators does the language have?  The larger the number the less readable.
+---
+Consider COBOL:
+
+https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_8.7.0/com.ibm.swg.im.iis.ds.mfjob.dev.doc/topics/r_dmnjbref_COBOL_Reserved_Words.html
+---
+Compare to Python:
+
+https://www.programiz.com/python-programming/keywords-identifier
 ---
 Readability - Simplicity
 ***
@@ -118,6 +137,9 @@ int main(void){
 ```
 
 What does this even output???
+Note:
+
+Outputs 43.  Compile and show!
 ---
 Readability - Orthogonality
 ***
@@ -255,16 +277,14 @@ int main(int argc, char** argv){
 }
 ```
 ---
-Now, let's turn to **Writability**.
-
-The same issues that affect Readability also affect Writability.
-
-But, there are a few more.
----
 Writability
 ***
 
 Measures how easily the language can be used to create programs.
+---
+The same issues that affect Readability also affect Writability.
+
+But, there are a few more.
 ---
 Writability - Simplicity and Orthogonality
 ***
@@ -377,5 +397,8 @@ Cost
 - Compilation costs such as the price of the compiler (proprietary compilers can be expensive!), downtime waiting for compilation to complete, etc. affect cost.
 
 - Cost can also be influenced by runtimes.  Consider for instance renting time on a supercomputer.  This is VERY expensive.  A less efficient language may require longer run times to complete similar jobs.
+---
+## Cost
+***
 
 - Reliability can affect cost as well.
