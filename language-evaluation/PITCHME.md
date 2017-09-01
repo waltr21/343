@@ -398,7 +398,7 @@ Cost
 
 - Cost can also be influenced by runtimes.  Consider for instance renting time on a supercomputer.  This is VERY expensive.  A less efficient language may require longer run times to complete similar jobs.
 ---
-## Cost
+### Cost
 ***
 
 - Reliability can affect cost as well.
