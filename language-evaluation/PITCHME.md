@@ -29,7 +29,7 @@ We will mostly focus on the first three in this class
 - Expressivity
 - Cost
 ---
-Readability
+**Readability**
 ***
 
 Refers to how easily the language can be read and understood.  For instance, here is the source code for the original *Prince of Persia* game:
@@ -41,7 +41,7 @@ In case you're interested, here is the original game play on the Apple II:
 
 https://www.youtube.com/watch?v=T5-06QnCHKY
 ---
-Readability
+**Readability**
 ***
 
 This Assembly Language code was very low-level.  It lacked things like for-loops and other higher-level constructs.  Because of these deficiencies it is much more cumbersome to express ideas concisely.
@@ -58,7 +58,7 @@ Both of these are from the International Obfuscated Code Contest.
 
 http://www.ioccc.org/years.html#2015
 ---
-Readability
+**Readability**
 ***
 
 Both of these programs are perfectly valid C code.
@@ -67,7 +67,7 @@ They include higher-level concepts than Assembly Language typically provides, ye
 
 So then, what makes code written in one programming language more readable than another?
 ---
-Readability
+**Readability**
 ***
 
 Simplicity.
@@ -78,7 +78,7 @@ Simplicity.
 
 - Operator overloading
 ---
-Readability - Simplicity
+**Readability - Simplicity**
 ***
 
 **Having a small number of basic constructs**
@@ -93,7 +93,7 @@ Compare to Python:
 
 https://www.programiz.com/python-programming/keywords-identifier
 ---
-Readability - Simplicity
+**Readability - Simplicity**
 ***
 
 **Feature multiplicity**
@@ -109,7 +109,7 @@ count++
 
 The more ways to accomplish a task, the lower the readability.
 ---
-Readability - Simplicity
+**Readability - Simplicity**
 ***
 
 **Operator Overloading**
@@ -141,21 +141,21 @@ Note:
 
 Outputs 43.  Compile and show!
 ---
-Readability - Orthogonality
+**Readability - Orthogonality**
 ***
 
 Means that a **relatively small set of primitive constructs** can be combined in a **relatively small number of ways** to write code, and that every possible combination of primitives is legal and meaningful.
 
 Eh?
 ---
-Readability - Orthogonality
+**Readability - Orthogonality**
 ***
 
 For instance, in the Java programming language it is perfectly legal to return any data type from a function; in other languages though (such as C), attempting to return an array data type from a function is invalid code.
 
 Eg:
 ---
-Java
+**Java**
 
 ```Java
 public Car[] getCars(){
@@ -163,7 +163,7 @@ public Car[] getCars(){
   return cars;                // Valid!
 }
 ```
-C
+**C**
 
 ```C
 int[] getValues(){
@@ -175,21 +175,21 @@ int[] getValues(){
 }
 ```
 ---
-Readability - Orthogonality
+**Readability - Orthogonality**
 ***
 
 What that means is that in this instance Java is more orthogonal.
 
 Java and C both have a small number of constructs (such as the idea of arrays), but C has limits to how they can be used.  Java has no such restrictions.
 ---
-Readability - Orthogonality
+**Readability - Orthogonality**
 ***
 
 Java is therefore more readable; in C we have to use pointers to return an array, but we also use pointers to return pointers from functions.
 
 Understanding the programmer's original intent becomes harder.
 ---
-Readability - Orthogonality
+**Readability - Orthogonality**
 ***
 
 But, with everything there is a catch.
@@ -200,7 +200,7 @@ Too much orthogonality can be bad too.  For instance, are conditionals allowed o
 5 * a = b           // May be valid (in some languages), but what is the intent?
 ```
 ---
-Readability - Data Types
+**Readability - Data Types**
 ***
 
 Are they adequate to describe what needs to be described?
@@ -216,7 +216,7 @@ int goAhead = 1;
 ```
 *Yes, I know there are boolean libraries for C.  They still don't provide full boolean functionality though.  Try using them in an ```if``` statement.*
 ---
-Readability - Syntax
+**Readability - Syntax**
 ***
 
 Are there easy to use facilities for denoting code groups?
@@ -245,7 +245,7 @@ Others use matching words
   fi
   ```
 ---
-Readability - Syntax
+**Readability - Syntax**
 ***
 
 Can special words be used as names of variables (hopefully not!)?  Consider how confusing this might be:
@@ -257,7 +257,7 @@ while( while < 100 ){
 }
 ```
 ---
-Readability - Syntax
+**Readability - Syntax**
 ***
 
 Form and (fairly) obvious meaning.
@@ -277,7 +277,7 @@ int main(int argc, char** argv){
 }
 ```
 ---
-Writability
+**Writability**
 ***
 
 Measures how easily the language can be used to create programs.
@@ -286,34 +286,34 @@ The same issues that affect Readability also affect Writability.
 
 But, there are a few more.
 ---
-Writability - Simplicity and Orthogonality
+**Writability - Simplicity and Orthogonality**
 ***
 
 The larger and more complex the language, the harder it is to use it to solve problems.
 
 Consider how hard it is to debug a language in which every combination of primitives is legal.  For instance, in C it can be very confusing to discover pointer errors.
 ---
-Writability - Support for Abstraction
+**Writability - Support for Abstraction**
 ***
 
 Abstraction refers to the ability to define and use complicated structures without worrying about the underlying details.  In our Ruby matrix example earlier, we didn't need to know or care to know how the matrix was stored behind the scenes.  All we cared about was that we were given a data structure that could efficiently store and operate on a matrix for us.
 ---
-Writability - Support for Abstraction
+**Writability - Support for Abstraction**
 ***
 
 There are two types of abstraction in computing, process abstraction and data abstraction.
 ---
-Writability - Support for Abstraction
+**Writability - Support for Abstraction**
 ***
 
 **Process Abstraction** is the use of subprograms (a function or module) to repeatedly solve a problem.  For instance, if we can pass a custom comparison operator to a sorting function then we can use the same code to sort our data regardless of the data type.
 ---
-Writability - Support for Abstraction
+**Writability - Support for Abstraction**
 ***
 
 **Data Abstraction** allows us to define a data type and operations that work on that data type (such as a class in Java) that we can then reuse.
 ---
-Writability - Expressivity
+**Writability - Expressivity**
 ***
 
 Are there convenient ways to accomplish computations, or do we need to rely on cumbersome methods?
@@ -327,14 +327,14 @@ count++               // NOT VALID!
 count = count + 1     // Valid.
 ```
 ---
-Writability - Reliability
+**Writability - Reliability**
 ***
 
 Does a language always perform to its specifications, under all conditions?
 
 Don't think reliability as in the mechanical sense.  It isn't as if the language isn't going to "start-up" one day.
 ---
-Writability - Reliability
+**Writability - Reliability**
 ***
 
 **Type Checking**
@@ -347,7 +347,7 @@ int pi = 3.14159
 
 Some languages will see this as a type error.  Others may not.
 ---
-Writability - Reliability
+**Writability - Reliability**
 ***
 
 **Exception Handling**
@@ -363,7 +363,7 @@ catch (FileNotFoundException fnfex){
 }
 ```
 ---
-Writability - Reliability
+**Writability - Reliability**
 ***
 
 **Aliasing**
@@ -379,26 +379,26 @@ int & alias = value;    // alias now refers to the same location
                         // the same variable.
 ```
 ---
-Writability - Cost
+**Writability - Cost**
 ***
 
 We won't be discussing this factor much in this class (it is more a Software Engineering topic), but Cost is a factor in language comparison.
 ---
-Cost
+**Cost**
 ***
 
 - Training programmers to use the language.  Often more powerful languages are more complicated to teach.
 
 - How well the language fits the domain of the application can affect cost.  If the domain is not well supported by the language it may take much longer to program the application.
 ---
-Cost
+**Cost**
 ***
 
 - Compilation costs such as the price of the compiler (proprietary compilers can be expensive!), downtime waiting for compilation to complete, etc. affect cost.
 
 - Cost can also be influenced by runtimes.  Consider for instance renting time on a supercomputer.  This is VERY expensive.  A less efficient language may require longer run times to complete similar jobs.
 ---
-### Cost
+**Cost**
 ***
 
 - Reliability can affect cost as well.
