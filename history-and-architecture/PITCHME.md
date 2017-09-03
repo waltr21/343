@@ -172,6 +172,7 @@ Note:
 There seems to be some conflict as to whether it was a 704 or a 7094.
 ---
 <audio src="./history-and-architecture/images/daisy.mp3">Audio not supported :(</audio>
+---
 **Fortran and the IBM 704**
 ***
 
