@@ -171,7 +171,7 @@ Led to the creation of LISP, a musical language called MUSIC, inspired the voice
 Note:
 There seems to be some conflict as to whether it was a 704 or a 7094.
 ---
-<audio src="./history-and-architecture/images/daisy.mp3">Audio not supported :(</audio>
+https://github.com/irawoodring/343/blob/master/history-and-architecture/images/daisy.mp3
 ---
 **Fortran and the IBM 704**
 ***
@@ -332,7 +332,21 @@ Instead of the near ubiquitous
 y = 0;
 ```
 ---
-```ALGOL
+For instance:
+```ALGOL_60
+for j=2 to A.length
+  key = A[j]
+  // Insert A[j] into the sorted
+      sequence A[1..j-1].
+  i = j - 1
+  while i > 0 and A[i] > key
+    A[i + 1] = A[i]
+    i = i - 1
+  A[i + 1] = key
+```
+Insertion sort pseudocode from the 3rd edition of *Introduction to Algorithms* by Cormen, Lieserson, Rivest, and Stein.
+---
+```ALGOL_60
 procedure Absmax(a) Size:(n, m) Result:(y) Subscripts:(i, k);
     value n, m; array a; integer n, m, i, k; real y;
 comment The absolute greatest element of the matrix a, of size n by m,
