@@ -678,6 +678,8 @@ Was the first language to provide data abstraction.  Used the class construct.  
 **ALGOL 68 and ALGOL Descendants**
 ***
 
+Many other languages based upon these early ones began to pop up, with different design focuses.
+---
 ALGOL 68 stressed orthogonality.
 ```ALGOL_68
 PROC gcd = (INT a, b) INT: (
@@ -700,7 +702,7 @@ test:(
 ```
 ---
 Pascal, designed for teaching programming, stressed simplicity and expressivity.
----
+
 ```Pascal
 function gcd_iterative(u, v: longint): longint;
   var
