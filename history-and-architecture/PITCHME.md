@@ -346,6 +346,8 @@ for j=2 to A.length
 ```
 Insertion sort pseudocode from the 3rd edition of *Introduction to Algorithms* by Cormen, Lieserson, Rivest, and Stein.
 ---
+Or, if you've looked at ALGOL code before:
+
 ```ALGOL_60
 procedure Absmax(a) Size:(n, m) Result:(y) Subscripts:(i, k);
     value n, m; array a; integer n, m, i, k; real y;
@@ -370,23 +372,16 @@ Over the years different versions of ALGOL added many interesting new features.
 
 - it was the first imperative language to allow recursion
 
-- it allowed passing parameters to subprograms by value or by named
+- it allowed passing parameters to subprograms by value or by name
 
 - in introduced block structure (scoping rules)
 ---
 **ALGOL**
 ***
 
-It never achieved widespread use in the U.S.
+It never achieved widespread use in the U.S. (did in Europe).
 
 However, many concepts it introduced are still seen in programming languages today.
----
-**COBOL**
-***
-
-According to our text COBOL has been used more than any other language, but oddly never affected the programming world the way ALGOL did.
-
-So in some ways, they are very opposite of one another.
 ---
 **COBOL**
 ***
@@ -398,7 +393,14 @@ Came out of a meeting sponsored by the Department of Defense on designing a comm
 **COBOL**
 ***
 
-Wanted to use English statements as much as possible, be easy to use (even if that meant it was less powerful), and should be designed in a way to remove as much implementation restrictions as possible.
+According to our text COBOL has been used more than any other language, but oddly never affected the programming world the way ALGOL did.
+
+So in some ways, they are very opposite of one another.
+---
+**COBOL**
+***
+
+Designers wanted to use English statements as much as possible, wanted it to be easy to use (even if that meant it was less powerful), and thought it should be designed in a way to remove as much implementation restrictions as possible.
 ---
 **COBOL**
 ***
@@ -512,7 +514,11 @@ IBM wanted to have a general purpose "language for everyone".
 **PL/I**
 ***
 
-Included best of ALGOL 60 - recursion, block structure, Fortran IV - separate compilation, global data, and COBOL 60 - data structures, I/O, and report generation, and new constructs.
+Included best of:
+
+- ALGOL 60 with recursion, block structure
+- Fortran IV with separate compilation, global data
+- COBOL 60 - data structures, I/O, and report generation, and new constructs.
 ---
 **PL/I**
 ***
@@ -531,7 +537,7 @@ Was a little over ambitious.  Included too many features to be useful for progra
 
 Also had many poorly designed constructs (although it was the first for some which should be considered).
 
-Was used somewhat in the 70s then sort of died.
+Was used somewhat in the 70s then sort of died.  Was still in the 50-100 languages section from TIOBE index as of Fall 2017.
 ---
 ```PL/I
 /* PL/I PROGRAM EXAMPLE
@@ -590,10 +596,77 @@ https://en.wikipedia.org/wiki/APL_syntax_and_symbols
 
 Still used, though not widely.  Oddly enough it hasn't changed much in its 50 years.
 ---
+Can try it here!
+
+http://tryapl.org/
+---
 **Early Dynamic Languages**
 ***
 
 **SNOBOL** was a Bell Labs invention.  Made for text processing.  Still around though not widely used.
+
+**S**tri**N**g **O**riented and sym**BO**lic **L**anguage
+---
+```SNOBOL
+*	WORDSIZE.SNO
+*
+*	Program to read a file and display the number of words of
+*	various word lengths.  To make the program more interesting,
+*	we shall only consider word lengths between 3 and 9.  This allows
+*	us to demonstrate the use of an array with subscripts offset from
+*	1, as well as array failure.
+*
+*	The file being scanned is read from standard input.  For example,
+*	to scan the file TEXT.IN, type:
+*
+*		SNOBOL4 WORDSIZE <TEXT.IN
+*
+*	Trim trailing blanks from input
+*
+	&TRIM	=	1
+
+*	Define pattern for words.  A word consists of upper- and lower-case
+*	letters, apostrosphe and hyphen.
+*
+	WORDPAT	=	BREAK(&LCASE &UCASE) SPAN(&LCASE &UCASE "'-") . WORD
+
+*	Define the array to hold the word counts.  Valid subscripts must be
+*	in the range 3 through 9; all others will cause the array reference
+*	to fail.  Array elements are initialized to zero instead of the normal
+*	default, which is the null string.  This causes a zero to be produced
+*	in the printed output if a particular array entry is never incremented.
+*
+	COUNT	=	ARRAY('3:9',0)
+
+*	Read a line from the input file.  Fail if end-of-file.
+*
+READ	LINE	=	INPUT				:F(DONE)
+
+*	Find the next word in LINE, and remove it to WORD.  Fail when
+*	no more words remain in the line.
+*
+NEXTW	LINE WORDPAT =					:F(READ)
+
+*	Increment the appropriate array element for words of this
+*	size.  The statement quietly fails if the size is outside
+*	the range 3 through 9.
+*
+	COUNT<SIZE(WORD)> = COUNT<SIZE(WORD)>+ 1	:(NEXTW)
+
+*	Upon end of file, print the values in the array.  Print heading first.
+*
+DONE	OUTPUT	=	"WORD LENGTH     NUMBER OF OCCURRENCES"
+	I	=	2
+
+*	Index through array starting at element 3.  When we reach element
+*	10, the array reference fails, and we fall through to END.
+*
+PRINT	I	=	I + 1
+	OUTPUT	=	LPAD(I,5) LPAD(COUNT<I>,20)	:S(PRINT)
+
+END
+```
+From http://groups.engin.umd.umich.edu/CIS/course.des/cis400/snobol/word.html
 ---
 **SIMULA 67**
 ***
@@ -606,10 +679,54 @@ Was the first language to provide data abstraction.  Used the class construct.  
 ***
 
 ALGOL 68 stressed orthogonality.
-
+```ALGOL_68
+PROC gcd = (INT a, b) INT: (
+  IF a = 0 THEN
+    b
+  ELIF b = 0 THEN
+    a
+  ELIF a > b  THEN
+    gcd(b, a MOD b)
+  ELSE
+    gcd(a, b MOD a)
+  FI     
+);
+test:(
+  INT a = 33, b = 77;
+  printf(($x"The gcd of"g" and "g" is "gl$,a,b,gcd(a,b)));
+  INT c = 49865, d = 69811;
+  printf(($x"The gcd of"g" and "g" is "gl$,c,d,gcd(c,d)))
+)
+```
+---
 Pascal, designed for teaching programming, stressed simplicity and expressivity.
-
+---
+```Pascal
+function gcd_iterative(u, v: longint): longint;
+  var
+    t: longint;
+  begin
+    while v <> 0 do
+    begin
+      t := u;
+      u := v;
+      v := t mod v;
+    end;
+    gcd_iterative := abs(u);
+  end;
+```
+---
 C stressed flexibility and became the *lingua franca* of Computer Science.
+
+```C
+int
+gcd_iter(int u, int v) {
+  if (u < 0) u = -u;
+  if (v < 0) v = -v;
+  if (v) while ((u %= v) && (v %= u));
+  return (u + v);
+}
+```
 ---
 **Prolog**
 ***
