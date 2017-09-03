@@ -12,9 +12,9 @@ The history of computing goes back much farther than the actual times during whi
 
 Mathematicians and others were laying the foundations for programming languages far before we had the hardware.
 ---
-Charles Babbage worked on his difference engine; a mechanical device used to calculate polynomial functions.
+Charles Babbage worked on his difference engine - a mechanical device used to calculate polynomial functions.
 
-Ada Lovelave is widely credited with writing the first computer "program"; an algorithm for Babbage's machine.
+Ada Lovelave is widely credited with writing the first computer "program", an algorithm for Babbage's machine.
 ---?image=./history-and-architecture/images/Babbage_Difference_Engine.jpg&size=auto 90%
 ---?image=./history-and-architecture/images/Ada_Lovelace_portrait.jpg&size=auto 90%
 ---
@@ -59,13 +59,12 @@ Had (what we would consider) a weird syntax.
   | A + 1 => A          // This is an assignment statement.
 V | 4        5          // V line is for array subscripts
 S | 1.n      1.n        // S line is for the data type,
-                        // here an ```int``` of ```n``` bits.
+                        // here an 'int' of 'n' bits.
 ```
 
 This statement group would be written more like
 
 ```C
-int a[100];
 a[5] = a[4] + 1;
 ```
 
@@ -99,11 +98,15 @@ Coded mathematical expressions.
 ---
 Variables were byte-pair Codes
 
-```X0 = SQRT(ABS(Y0))```
+```
+X0 = SQRT(ABS(Y0))
+```
 
 Becomes
 
-```00 X0 03 20 06 Y0```
+```
+00 X0 03 20 06 Y0
+```
 ---
 **Pseudocodes**
 ***
@@ -156,7 +159,19 @@ Received 40 honorary degrees from universities around the world, as well as the 
 During the 40s and early 50s there was no floating point hardware; people had to use interpreted systems to do floating point operations.  These were very slow.
 
 The IBM 704 was the first machine that included hardware for both integer and floating point operations.  Fortran statements were very similar to the hardware statements of the 704.
+---?image=./history-and-architecture/images/ibm704.jpg&size=auto 90%
 ---
+**Fortran and the IBM 704**
+***
+
+Was **the** computer at the time.
+
+Led to the creation of LISP, a musical language called MUSIC, inspired the voice for HAL in *2001: A Space Odyssey* when John Larry Kelly at Bell Labs demonstrated a voice synthesizer program singing "Bicycle Built for Two".
+
+Note:
+There seems to be some conflict as to whether it was a 704 or a 7094.
+---
+<audio src="./history-and-architecture/images/daisy.mp3">Audio not supported :(</audio>
 **Fortran and the IBM 704**
 ***
 
@@ -278,6 +293,8 @@ Today, functional languages are taking off (for good reason!).
 ```
 
 LISP sample code from our textbook.
+Note:
+Have them notice what is happening here - we are chaining together functions.
 ---
 **LISP**
 ***
