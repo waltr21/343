@@ -8,6 +8,16 @@ Ira Woodring
 **Architecture and History**
 (Sebesta Text)
 ---
+Before we start, let's get a few definitions out of the way.
+
+**Imperative Programming**: a programming model whereby we use statements to change state.
+
+**Procedural Programming**: a programming model makes use of subroutines.  Is also imperative, as these subroutines rely upon changing state with statements.
+---
+**Object-oriented Programming**: a programming paradigm that incorporates structure and function (state and behavior) of data structures into a single entity (often called a class).
+
+**Functional Programming**: a programming model that relies upon programs being built as the output of mathematical functions.
+---
 The history of computing goes back much farther than the actual times during which computers existed.
 
 Mathematicians and others were laying the foundations for programming languages far before we had the hardware.
@@ -168,7 +178,7 @@ The IBM 704 was the first machine that included hardware for both integer and fl
 
 Was **the** computer at the time.
 
-Led to the creation of LISP, a musical language called MUSIC, inspired the voice for HAL in *2001: A Space Odyssey* when John Larry Kelly at Bell Labs demonstrated a voice synthesizer program singing "Bicycle Built for Two".
+Led to the creation of LISP, a musical language called MUSIC, inspired the voice for HAL in *2001: A Space Odyssey* when John Larry Kelly at Bell Labs demonstrated a voice synthesizer program singing "Bicycle Built for Two" to Arthur C. Clarke who was visiting a friend.
 
 Note:
 There seems to be some conflict as to whether it was a 704 or a 7094.
@@ -178,7 +188,7 @@ https://github.com/irawoodring/343/blob/master/history-and-architecture/images/d
 **Fortran and the IBM 704**
 ***
 
-Often credited with being the first compiled high level language (though there are some questions about that).  A lot of folks were working on this issue at that time.
+Fortran is often credited with being the first compiled high level language (though there are some questions about that).  A lot of folks were working on this issue at that time.
 
 Released first in 1956 (at least the manual for it; it had been around a bit longer).
 
@@ -232,6 +242,18 @@ close(10)
 end
 ```
 Sample Fortran 90/95 code from https://en.wikibooks.org/wiki/Fortran/Fortran_examples#Summations_with_a_DO_loop
+---
+This code can be compiled on EOS with the command
+
+```
+gfortran -o OUTPUT_FILENAME SOURCE_FILENAME(s)
+```
+
+So for instance, if you had named the file ```source.f90``` and want the executable to be called ```sum``` you would use
+
+```
+gfortran -o sum source.f90
+```
 ---
 **LISP**
 ***
@@ -384,6 +406,15 @@ Over the years different versions of ALGOL added many interesting new features.
 It never achieved widespread use in the U.S. (did in Europe).
 
 However, many concepts it introduced are still seen in programming languages today.
+---
+**ALGOL**
+***
+
+If you want to play with it, we don't have a compmiler on EOS.  However, the website
+
+https://www.tutorialspoint.com/execute_algol_online.php
+
+Will let you explore it and many other languages.
 ---
 **COBOL**
 ***
