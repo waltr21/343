@@ -730,6 +730,8 @@ gcd_iter(int u, int v) {
 }
 ```
 ---
+Other languages began to come along that stressed completely different paradigms from the imperative model.
+---
 **Prolog**
 ***
 
