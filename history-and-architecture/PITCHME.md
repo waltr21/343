@@ -1006,3 +1006,59 @@ In retrospect this this can be summarized best with a quote from *The Hitchhiker
 
 - Douglas Adams, The Restaurant at the End of the Universe
 ---
+**Java**
+***
+
+Based on C++, but smaller and more reliable.
+
+Has class and primitive types.
+
+No pointers, but does have references.
+
+Has ```boolean```s.
+---
+**Java**
+***
+
+Only supports OO though.  You can't write a stand-alone subprograms.
+
+Did not allow for multiple inheritance (somewhat can now).
+
+First interpreter was 10 times slower than compiled C code, but now is very close to the same.
+
+As of this writing it is the world's most used language (probably greatly due to the proliferation of Android devices, but certainly not entirely).
+---
+```Java
+// Java Example Program
+// Input: An integer, listlen, where listlen is less
+// than 100, followed by length-integer values
+// Output: The number of input data that are greater than // the average of all input values
+import java.io.*;
+class IntSort {
+public static void main(String args[]) throws IOException {
+DataInputStream in = new DataInputStream(System.in); int listlen,
+      counter,
+      sum = 0,
+      average,
+      result = 0;
+int[] intlist = new int[99];
+listlen = Integer.parseInt(in.readLine()); if ((listlen > 0) && (listlen < 100)) {
+/* Read input into an array and compute the sum */ for (counter = 0; counter < listlen; counter++) {
+      intlist[counter] =
+             Integer.valueOf(in.readLine()).intValue();
+      sum += intlist[counter];
+    }
+/* Compute the average */
+    average = sum / listlen;
+/* Count the input values that are > average */ for (counter = 0; counter < listlen; counter++)
+if (intlist[counter] > average) result++; /* Print result */
+      System.out.println(
+          "\nNumber of values > average is:" + result);
+} //** end of then clause of if ((listlen > 0) ... else System.out.println(
+              "Error—input list length is not legal\n");
+  }  //** end of method main
+}  //** end of class IntSort
+```
+---
+**Perl**
+***
