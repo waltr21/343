@@ -813,4 +813,196 @@ At one time, some computer scientists thought logic programming would overtake o
 **Ada**
 ***
 
-Developed for the Department of Defense.  
+Developed for the Department of Defense.
+
+They had a great number of embedded systems, and the costs of programming them was high.  At that point they were using more than 450 languages, as every contractor was using their own language.
+---
+**Ada**
+***
+
+Our book's author calls it "History's Largest Design Effort", because of all the work that went into its creation.
+
+The "High-Order Language Working Group" was created first.  They identified the needs and made recommendations.
+
+Many groups submitted proposals then for languages.
+---
+**Ada**
+***
+
+Four groups were ultimately chosen.  All four of the proposals were based on Pascal.
+
+Name was given in 1979 by Jack Cooper.  Named after Ada Lovelace, who is thought of as the first programmer.
+
+Design was published in ACM SIGPLAN Notices and distributed to 10,000 people around the globe.  Over 500 language reports and suggestions were suggested.
+---
+**Ada**
+***
+
+Major contributions included:
+
+- Packages.  Provided means for encapsulating data objects, specifications for data and types, and procedures.  Allowed for data abstraction.
+
+- Extensive exception handling.
+
+- Generic program units.  So that you, for instance, could write a sort routine once and use it on many types of data.
+
+- Concurrent execution of tasks using a rendezvous mechanism (a method of intertask communication and synchronization).
+---
+**Ada**
+***
+
+The development of the compiler turned out to be somewhat difficult.  Compilers didn't come out for another four years (around 1985!).
+
+Was sometimes thought to be too large and complex.
+
+Still used today by the DoD.
+---
+```Ada
+-- Ada Example Program
+        -- Input:  An integer, List_Len, where List_Len is less
+-- than 100, followed by List_Len-integer values -- Output: The number of input values that are greater -- than the average of all input values
+with Ada.Text_IO, Ada.Integer.Text_IO;
+use Ada.Text_IO, Ada.Integer.Text_IO;
+procedure Ada_Ex is
+type Int_List_Type is array (1..99) of Integer; Int_List : Int_List_Type;
+List_Len, Sum, Average, Result : Integer;
+begin
+Result:= 0;
+Sum := 0;
+Get (List_Len);
+if (List_Len > 0) and (List_Len < 100) then
+-- Read input data into an array and compute the sum for Counter := 1 .. List_Len loop
+      Get (Int_List(Counter));
+      Sum := Sum + Int_List(Counter);
+end loop;
+-- Compute the average
+    Average := Sum / List_Len;
+-- Count the number of values that are > average for Counter := 1 .. List_Len loop
+if Int_List(Counter) > Average then Result:= Result+ 1;
+      end if;
+    end loop;
+-- Print result
+    Put ("The number of values > average is:");
+    Put (Result);
+    New_Line;
+else
+    Put_Line ("Error—input list length is not legal");
+end if; end Ada_Ex;
+```
+From our textbook.
+---
+**Smalltalk**
+***
+
+First programming language to fully support OO.
+
+Originated in a Ph.D. dissertation of a guy named Alan Kay in 1969.
+
+He had the crazy idea that non-tech folks would one day program computers.  Additionally, he thought that we would eventually have graphical interfaces, and computers that could compute millions of instructions per second on megabytes of memory!
+---
+**Smalltalk**
+***
+
+He ended up at Xerox at Palo Alto (many important things can from here!).
+
+Created first Smalltalk in 1972.
+
+All computing in Smalltalk was done by sending a message to an object to invoke a method.  Object sends a return reply with either data or an acknowledgment.
+---
+**Smalltalk**
+***
+
+Used classes just like SIMULA 67.
+
+Was essential in GUI and OO programming.  Almost all ways we use today to design interfaces grew out of Smalltalk.
+---
+```Smalltalk
+"Smalltalk Example Program"
+"The following is a class definition, instantiations of which can draw equilateral polygons of any number of sides"
+class name
+superclass
+instance variable names
+numSides
+sideLength
+"Class methods"
+  "Create an instance"
+  new
+^ super new getPen
+  "Get a pen for drawing polygons"
+  getPen
+ourPen <- Pen new defaultNib: 2
+  "Instance methods"
+  "Draw a polygon"
+  draw
+     numSides timesRepeat: [ourPen go: sideLength;
+                            turn: 360 // numSides]
+  "Set length of sides"
+  length: len
+     sideLength <- len
+  "Set number of sides"
+  sides: num
+numSides <- num
+```
+---
+**C++**
+***
+
+Bjarne Stroustrup at Bell Labs wanted to modify C to make it more like SIMULA and Smalltalk.  He wanted things like
+
+- derived classes
+
+- public/private access control on inherited components
+
+- constructors and destructors
+
+- friend classes
+---
+**C++**
+***
+
+Language began to grow rapidly adding many other capabilities over the years.
+
+Supports both procedural and OO programming.
+
+Allows operator overloading, templates, multiple inheritance, exception handling, and many other advanced features.
+---
+**C++**
+***
+
+Remains remarkably widespread in its use.
+
+Is large and unruly at times though.  Hard to learn, and inherited many of C's problems.
+---
+**Objective-C**
+***
+
+Designed in the early 80s.  Was C plus the classes and message passing of Smalltalk.
+
+Was popularized by Steve Jobs when he left Apple and founded NeXT.  Brought it back to Apple when he returned and used it to write OS X.  Was the primary language of iPhone until Swift.
+---
+**Delphi**
+***
+
+Another hybrid language approach; brought OO facilities to Pascal.
+
+Because C was a somewhat unsafe language, the languages based on it were as well.
+
+Pascal was a safer, more elegant language, and Delphi sought to build on those benefits.
+
+Ended up being less complex than C++.  Did provide nice set of GUI interfaces though.
+---
+**Java**
+***
+
+Sun Microsystems wanted a language for embedded consumer devices such as toaster, microwaves, tvs, etc.
+
+Primary goal was reliability.  Sending out a million microwaves with bad programming could be disastrous, they wanted to help fix that.
+
+Somehow though, it began to be used for the Web.
+
+In retrospect this this can be summarized best with a quote from *The Hitchhikers Guide to the Galaxy:*
+---
+> "The story so far: In the beginning the Universe was created.  This has made a lot of people very angry and been widely regarded as a bad move."
+
+- Douglas Adams, The Restaurant at the End of the Universe
+---
