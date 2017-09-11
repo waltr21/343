@@ -1191,3 +1191,9 @@ So we are using the Princeton model of computation, implying that memory holds d
 Let's examine our memory:
 ---?image=./history-and-architecture/images/memory.png&size=auto 50%
 ---
+**Architecture**
+***
+
+This becomes immensely important when we are programming in a language that allows us to manage memory (at least to manage it to some degree).
+
+Consider C.  Whenever we compile our code, the compiler creates static variables for us on the stack.  If we need any kind of dynamically created variables (for example a storage area that could grow or shrink) then we must manage the memory ourselves.
