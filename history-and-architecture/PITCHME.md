@@ -1189,5 +1189,5 @@ Go over each model on the board.  Remember, Princeton has data and instructions 
 So we are using the Princeton model of computation, implying that memory holds data and instructions.
 
 Let's examine our memory:
----?image=./history-and-architecture/images/memory.png?size=auto 90%
+---?image=./history-and-architecture/images/memory.png?size=auto 10%
 ---
