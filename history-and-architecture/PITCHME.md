@@ -1170,7 +1170,7 @@ We solve problems by the changing of state in memory.
 
 Even when we are using a programming language that is of a paradigm different than the imperative model, that is still happening.  There is just some abstraction going on.
 ---
-![Video](https://www.youtube.com/embed/dNRDvLACg5Q&t=90s)
+![Video](https://www.youtube.com/embed/dNRDvLACg5Q)
 ---
 ![Video](https://www.youtube.com/embed/E3keLeMwfHY)
 ---
