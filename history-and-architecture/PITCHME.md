@@ -1062,3 +1062,130 @@ if (intlist[counter] > average) result++; /* Print result */
 ---
 **Perl**
 ***
+
+Written by Larry Wall at NASA.  Wanted a language to help write reports.
+
+Often called a scripting language, but it is compiled so isn't really.
+
+Variables are statically typed and implicitly declared.  All scalar variables start with a ```$```, all arrays with an ```@```, and hashes with ```%```.
+
+Includes many implicit variables (often used for parameters).
+---
+**Perl**
+***
+
+Is still widely used as a UNIX system admin tool.
+
+For awhile was a primary language for web CGI (Common Gateway Interface).  Fortunately those days have largely passed.
+---
+```Perl
+# Perl Example Program
+# Input:  An integer, $listlen, where $listlen is less
+#
+#
+#
+($sum, $result) = (0, 0);
+$listlen = <STDIN>;
+than 100, followed by $listlen-integer values. Output: The number of input values that are greater than
+the average of all input values.
+if (($listlen > 0) && ($listlen < 100)) {
+  # Read input into an array and compute the sum
+  for ($counter = 0; $counter < $listlen; $counter++) { $intlist[$counter] = <STDIN>;
+} #- end of for (counter ...
+# Compute the average
+$average = $sum / $listlen;
+# Count the input values that are > average
+foreach $num (@intlist) {
+  if ($num > $average) { $result++; }
+} #- end of foreach $num ...
+# Print result
+print "Number of values > average is: $result \n";
+} #- end of if (($listlen ...
+else {
+  print "Error--input list length is not legal \n";
+}
+```
+From Sebesta book.
+---
+**Javascript**
+***
+
+Created at Netscape.
+
+The web needed dynamic content.  Server-side dynamic content could be done with CGI.  Javascript addressed the client-side.
+
+Has nothing to do with Java.
+---
+**Javascript**
+***
+
+Most common used in browsers, but that is changing.  Javascript interpreter nows exist outside of the browser, even on the command-line, on mobile devices, and on server-side applications.
+
+This means that web/mobile applications can be programed completely in the same language.
+---
+```Javascript
+// example.js
+//   Input: An integer, listLen, where listLen is less
+//          than 100, followed by listLen-numeric values
+//  Output: The number of input values that are greater
+//          than the average of all input values
+var intList = new Array(99);
+var listLen, counter, sum = 0, result = 0;
+listLen = prompt (
+        "Please type the length of the input list", "");
+if ((listLen > 0) && (listLen < 100)) {
+// Get the input and compute its sum
+for (counter = 0; counter < listLen; counter++) {
+      intList[counter] = prompt (
+                     "Please type the next number", "");
+      sum += parseInt(intList[counter]);
+   }
+// Compute the average
+   average = sum / listLen;
+// Count the input values that are > average
+for (counter = 0; counter < listLen; counter++)
+if (intList[counter] > average) result++;
+// Display the results
+   document.write("Number of values > average is: ",
+                result, "<br />");
+} else document.write(
+       "Error - input list length is not legal <br />");
+```
+---
+**Other scripting languages**
+***
+
+I will leave it to you to explore PHP, Python, Ruby, and Lua from the book.
+
+There are all important (some even being in the top 10 of the TIOBE index), and are explored in Chapter 2.
+
+Also in Chapter 2 are overviews of C# and meta-languages.
+---
+# Architecture
+
+Remember, computers today operate much like Turing Machines.
+
+We solve problems by the changing of state in memory.
+
+Even when we are using a programming language that is of a paradigm different than the imperative model, that is still happening.  There is just some abstraction going on.
+---
+![Video](https://www.youtube.com/watch?v=dNRDvLACg5Q&t=90s)
+---
+![Video](https://www.youtube.com/watch?v=E3keLeMwfHY)
+---
+**Architecture**
+***
+
+Additionally, most all computers we deal with are based on the Princeton (also called the Von Neumann) model of computation.
+
+The Harvard model was the competing model - it never really took off wide-scale.  This is often attributed to the fact that writing algorithms is typically considered to be simpler for the Princeton model.
+Note:
+Go over each model on the board.  Remember, Princeton has data and instructions in the same memory where Harvard separates into two memories.
+---
+**Architecture**
+***
+
+So we are using the Princeton model of computation, implying that memory holds data and instructions.
+
+Let's examine our memory:
+---?image=./history-and-architecture/images/memory.png?size=auto 90%
