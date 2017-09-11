@@ -1161,7 +1161,8 @@ There are all important (some even being in the top 10 of the TIOBE index), and 
 
 Also in Chapter 2 are overviews of C# and meta-languages.
 ---
-# Architecture
+**Architecture**
+***
 
 Remember, computers today operate much like Turing Machines.
 
@@ -1189,3 +1190,4 @@ So we are using the Princeton model of computation, implying that memory holds d
 
 Let's examine our memory:
 ---?image=./history-and-architecture/images/memory.png?size=auto 90%
+---
