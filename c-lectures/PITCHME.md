@@ -94,6 +94,8 @@ A program written in C is some executable code (usually) linked to other librari
 These libraries are usually pieces of code written by a community of advanced programmers, and provide facilities such as I/O, memory management, etc.
 
 Usually these libraries have been in development for many years, are very robust, efficient, and secure code.  We should use them.
+
+But, we can write libraries as well (and should!).
 ---
 **Compilation**
 ***
