@@ -58,7 +58,7 @@ Rubric:
 
 ## Submission Process and Deadline
 
-This assignment is due on Friday, February 3 at midnight. Submit as follows:
+This assignment is due on Friday, September 29th at midnight. Submit as follows:
 
 >Upload to Blackboard.
 
