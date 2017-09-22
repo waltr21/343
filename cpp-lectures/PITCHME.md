@@ -85,6 +85,9 @@ class Car {
 ***
 
 Looking at the previous code you may have noticed the "::" operator between std and string.  This is called the Namespace Operator (or Scope Resolution Operator); it signifies where a function is defined.
+---
+**The Namespace Operator**
+***
 
 In C++ we are allowed to separate code into namespaces.  If we declare a function of data type inside of a namespace it becomes part of that namespace.  That allows us to separate our code into logical groupings.  The "::" operator tells us from which namespace a function is being called.
 ---
