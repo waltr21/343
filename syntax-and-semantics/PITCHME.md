@@ -418,3 +418,170 @@ A = B + C * A
          =>A = B + C * A
 ```
 ---
+**Syntax**
+***
+
+When we have operators with the same precedence level, we must have a semantic rule to decide which should come first.  This is the concept of *associativity*.
+---
+**Syntax**
+***
+
+At times we may have a grammar rule that includes the left-hand side (LHS) at the beginning of the right-hand side (RHS).  For example:
+
+```
+<term> -> <term> * <factor>
+        | <factor>
+```
+
+This rule is considered "left recursive".  This implies left associativity.  We may use this technique to specify that addition or multiplication are left-associative (we perform the calculation left to right).
+---
+**Syntax**
+***
+
+We may also have "right recursive" rules.  These may be useful, for instance, when we have a scenario like exponentiation.  Exponents should be calculated right to left (2^2^3 = 2^(2^3) = 2^(8) = 256).
+
+```
+<factor> -> <exp> ** <factor>
+          | <exp>
+<exp> -> ( <expr> )
+       | id
+```
+---
+**Syntax - Attribute Grammars**
+***
+
+Are an extension to a Context-Free Grammar.
+
+Allows some language rules to be described more easily.
+
+Consider for instance, type compatibility rules in Java.
+---
+**Syntax - Attribute Grammars**
+***
+
+A float can't be assigned to an int.
+
+But an int can be assigned to a float.
+
+We can describe this with BNF, but it adds more terminal symbols and rules.  The more of these we add to the language, the larger the grammar grows and the syntax analyzer grows as well (not good!).
+---
+**Syntax - Attribute Grammars**
+***
+
+Additionally, consider the situation where a language requires a variable to be declared before it is used.  According to our text, this has been proven to be impossible to describe with BNF.
+
+These problems are calls *static semantics*.  They are only partially related to a program while it is running; they are more concerned with compile time constraints (hence the **static**).
+---
+**Syntax - Attribute Grammars**
+***
+
+Attribute Grammars are CFGs which have attributes, attribute computation functions, and predicate functions.
+
+They may, for instance, be used to specify that a language that uses a ```BEGIN PROCEDURE_NAME``` rule is ended by an ```END``` and the same ```PROCEDURE_NAME```, or to easily address the situations mentioned in the past slides.
+
+We won't be discussing these further in this class; though you should be reading the sections that include them.  For now, they are included in this section to help you understand more fully what can and cannot be described with BNF forms.
+---
+**Semantics - The Meaning of Programs**
+***
+
+Where syntax refers to the form of a program, **semantics** refers to the meaning.
+
+Turns out describing syntax is easy.  Semantics, not so much.
+---
+**Semantics - The Meaning of Programs**
+***
+
+People using a language need to know what language statements will do.
+
+Unfortunately we often determine the semantics from manuals written in a human language, and human languages are imprecise and incomplete (as we saw when we learned about specific words in certain languages that English doesn't have!).
+---
+**Semantics - The Meaning of Programs**
+***
+
+A few methods have been designed to help formally denote semantics.
+
+- operational semantics
+
+- denotational semantics
+
+- axiomatic semantics
+---
+**Semantics - The Meaning of Programs**
+***
+
+Operational Semantics attempts to describe the meaning of a statement or program by specifying the effects of running it on a machine.
+
+For instance, you can run the program and see what happens.
+
+Problem is, too many changes (and changes too small) usually in machine state.
+
+So, we typically don't use this method.  We instead try to develop intermediate languages and interpreters to help provide semantics.
+---
+**Semantics - The Meaning of Programs**
+***
+
+Denotational Semantics maps functions to mathematical objects.  This is the most used method of describing meaning.
+
+For instance, if we had the grammar
+
+```
+<bin_num> -> '0'
+           | '1'
+           | <bin_num> '0'
+           | <bin_num> '1'
+```
+---
+**Semantics - The Meaning of Programs**
+***
+
+We could map this to the objects
+
+```
+Mbin('0') = 0
+Mbin('1') = 1
+Mbin(<bin_num> '0') = 2 * Mbin(<bin_num>)
+Mbin(<bin_num> '1') = 2 * Mbin(<bin_num>) + 1
+```
+
+With this we can construct the meaning of this entity.
+---
+```
+1011
+```
+
+Becomes
+```
+1011 = Mbin(1011)
+     = 2 * (Mbin(101)) + 1
+     = 2 * (2 * (Mbin 10) + 1) + 1
+     = 2 * (2 * (2 * (Mbin 1)) + 1) + 1
+     = 2 * (2 * (2 * 1) + 1) + 1
+     = 2 * (2 * (2) + 1) + 1
+     = 2 * (4 + 1) + 1
+     = 2 * (5) + 1
+     = 10 + 1
+     = 11
+```
+---
+**Semantics - The Meaning of Programs**
+***
+
+Axiomatic Semantics is the most abstract branch of formal semantics.  This field is concerned with what can be proven about a program, such as a proof of correctness.
+
+Axiomatic Semantics uses logical expressions called assertions to describe constraints on variables.  There may be preconditions and postconditions.
+
+For instance: ```sum = 2 * x + 1 {sum > 1}```
+---
+**Semantics - The Meaning of Programs**
+***
+
+Validation of a program using Axiomatic Semantics will be a proof:
+
+```
+{x = A AND y = B}
+t = x;
+x = y;
+y = t;
+{x = B AND y = A}
+```
+---
