@@ -154,6 +154,25 @@ void doNothing(){
 }
 ```
 ---
+**Using Objects**
+***
+
+C++ uses a similar syntax to Java when creating objects:
+
+```C++
+Car a;      // Note that this actually creates the object!
+            // Unlike Java in that respect.
+Car b("Porsche", "911", 1972, 37228.3);
+```
+---
+**Using Objects**
+***
+
+Once we have an object, we call its functions or access its public members just as we do in Java:
+
+```C++
+int mile = a.getMileage();
+```
 
 ---
 **Memory Management**
