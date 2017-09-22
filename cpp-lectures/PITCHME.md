@@ -42,11 +42,116 @@ For instance, if we were going to create a car object we might have two files:
 
 ```Car.h``` which holds the function signatures (the declarations), and ```Car.cpp``` that holds the code (or definitions).
 ---
-```Car.h```:
+**Car.h**
 
 ```C++
+#include <string>
 
+class Car {
+
+  public:
+    // Constructor with no parameters.
+    Car();
+
+    // Constructor with parameters.
+    Car(std::string make, std::string model, int year, double mileage);
+
+    // Accessors
+    std::string getMake();
+    std::string getModel();
+    int getYear();
+    double getMileage();
+
+    // Setters
+    void setMake(std::string make);
+    void setModel(std::string model);
+    int setYear(int year);
+    double setMileage(double mileage);
+
+  private:
+    std::string make;
+    std::string model;
+    int year;
+    double mileage;
+
+    // Fake function just to illustrate we can have functions
+    // that are private too.
+    void doNothing();
+
+};    // Notice the semicolon at the end of the declaration!
 ```
+---
+**The Namespace Operator**
+***
+
+Looking at the previous code you may have noticed the "::" operator between std and string.  This is called the Namespace Operator (or Scope Resolution Operator); it signifies where a function is defined.
+
+In C++ we are allowed to separate code into namespaces.  If we declare a function of data type inside of a namespace it becomes part of that namespace.  That allows us to separate our code into logical groupings.  The "::" operator tells us from which namespace a function is being called.
+---
+**The Namespace Operator**
+***
+
+This also allows us to have functions with the same names, but in different namespaces.  In fact, it is not uncommon for programmers to wish to use the same names for data types of functions.
+
+Notice how we define our functions from the Car.h file in a Car.cpp file.  We have to provide a namespace so the compiler knows specifically which functions we are trying to define:
+---
+**Car.cpp**
+
+```C++
+#include <string>
+
+Car::Car(){
+  make = "None";
+  model = "None";
+  year = 1900;
+  mileage = 0.0;
+}
+
+Car::Car(std::string make, std::string model, int year, double mileage){
+  this->make = make;
+  this->model = model;
+  this->year = year;
+  this->mileage = mileage;
+}
+
+std::string getMake(){
+  return make;
+}
+
+std::string getModel(){
+  return model;
+}
+
+int getYear(){
+  return year;
+}
+
+double getMileage(){
+  return mileage;
+}
+
+void setMake(std::string make){
+  this->make = make;
+}
+
+void setModel(std::string model){
+  this->model = model;
+}
+
+void setYear(int year){
+  this->year = year;
+}
+
+void setMileage(double mileage){
+  this->mileage = mileage;
+}
+
+void doNothing(){
+
+}
+```
+---
+
 ---
 **Memory Management**
 ***
