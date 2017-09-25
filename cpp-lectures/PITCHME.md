@@ -179,3 +179,152 @@ int mile = a.getMileage();
 ***
 
 Just like in C, C++ manages memory for static (compile time, on the stack) objects only.  Dynamically created memory (run-time, on the heap) must be managed by the programmer.
+
+When dynamically creating an object, we use the ```new``` keyword.
+
+Take note!  The ```new``` keyword always returns a pointer.
+---
+```C++
+Student a;      // Creates an object.
+                // Static.  Cared for by
+                // the system.
+
+Student* b = new Student();   // Creates an object.
+                              // On the Heap.  Cared
+                              // for by you!
+```
+
+Advantages of the second method are that the scope is not limited to the block the object was created in, the size can change, and the object can "live" as long as we want it to.
+---
+## CAVEAT EXAMPLE!
+
+```C++
+Student getStudent(){
+  Student a;
+  return a;
+}
+
+int main(int argc, char** argv){
+  Student b = getStudent();
+}
+```
+
+**What does this do?**
+---
+The object was created statically in the block of a function.
+
+The object is passed back by value (meaning it is copied!).
+
+This is ok for small objects, but for large ones look out!
+---
+## Better:
+
+```C++
+Student* getStudent(){
+  return new Student();
+}
+
+int main(int argc, char** argv){
+  Student* b;
+  b = getStudent();
+}
+```
+
+This will work; the object is created dynamically (at run-time!).  It will exist on the heap, so not inside a function's memory.  It will exist after the return.  There is no need for this object to be copied; instead the pointer variable will be copied (pointers are always small, so no biggie).
+---
+**References**
+***
+
+Often though, in C++ we are going to be using references.
+
+References are what you are (likely) used to using if you come from a Java background.  They can make it seem as if we are passing around an object (though we really aren't!).
+---
+**References**
+***
+
+Unfortunately, the designers of C++ decided to use the ```&``` operator to signify a reference - further lowering the readability of an already hard to read language.
+
+This means in C++ we have to examine the context of the use of ```&```.  Is it a reference, is it the memory address of an object, etc.
+---
+**References**
+***
+
+**Warning!** We have to remember the memory model we are constrained to use.  This means we cannot return a reference to an object created inside of a function.
+
+The memory that the reference points to does not exist after the function call returns.
+
+The big problem is that it will *sometimes* work.  It depends on whether the stack space was overwritten since the object was created or not.
+---
+**The Big Five**
+***
+
+When an object is created in C++, it is given some functions.  These functions are the:
+
+  - copy operator
+  - move operator
+  - copy operator=
+  - move operator=
+  - destructor
+---
+**The Big Five**
+***
+
+The copy operator is called whenever we pass an object as the parameter to another object.
+
+```C++
+Student a;
+a.gpa = 2.34;
+a.number = 9293;
+Student b(a);           // Student b is now a copy of a
+```
+---
+**The Big Five**
+***
+
+But... what happens if we have an object like this:
+
+```C++
+Student {
+  int number;
+  float gpa;
+  float* grades;
+};
+
+Student a;
+Student b(a);
+```
+---
+```C++
+Student {
+  int number;
+  float gpa;
+  float* grades;
+};
+
+Student a;
+Student b(a);
+Student c;
+a.grades = (float*) malloc(50*sizeof(float));    // What are the grades?
+```
+
+We have a problem... During the copy we copied the pointer.  The pointer holds the memory location of a's grades.  Anytime we change a, it will change b's grades as well.  They will both be forced to have the same grades!
+---
+**The Big Five**
+***
+
+This is called a **shallow copy**.  We don't want just the values to be copied.
+
+Imagine if we were storing a dynamically allocated array of grades.  If we did a shallow copy then anytime we added a grade for one student the other student would have that grade added as well.  They both need memory areas for their own best friends and grades.  This is what we call a **deep copy**.
+---
+**The Big Five**
+***
+
+Since our object uses dynamic memory allocation we are going to have to rewrite (at least some of) The Big Five.  The default ones won't work for us because our object needs some custom behavior.
+
+```C++
+Student(const Student &other){
+  this->gpa = other.gpa;
+  this->number = other.number;
+  this->bestFriend =
+}
+```
